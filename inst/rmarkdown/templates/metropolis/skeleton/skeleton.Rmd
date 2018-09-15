@@ -1,0 +1,99 @@
+---
+author: Your Name Here and Some Other Person
+title: "Something really clever here: \\newline And maybe a second line"
+subtitle: You can also have a subtitle
+date: 2018-09-15
+output: binb::metropolis
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+# A Section Header
+
+## A Slide Header
+
+### A Subtitle
+
+- Point A
+- Point B
+- Point C
+
+# Principal Resources
+
+## Metropolis
+
+### Main Repos
+
+- [Official GitHub Repo of Metropolis](https://github.com/matze/mtheme)
+  (formerly mtheme); older version in TeXLive 
+- [My GitHub Repo for a local Ubuntu package of Metropolis](https://github.com/eddelbuettel/pkg-latex-metropolis) -- formerly mtheme
+- [My GitHub Repo for a local Ubuntu package for the Fira font](https://github.com/eddelbuettel/pkg-fonts-fira) 
+
+## Ubuntu and Launchpad
+
+### Briefly
+
+- The packages which can be built (ie not Fira as it needs external fonts
+  which we cannot download during build) are
+  [in this repo](https://launchpad.net/~edd/+archive/ubuntu/misc/+packages)
+- If you're not on Ubuntu, it is probably more work to get
+    - Metropolis into your \LaTeX environment
+    - the Fira font into your \LaTeX environment
+- I *did* try without (on plain Ubuntu 16.04) and it _builds_ but looks less
+crisp
+- So for the time being you probably want these fresh from source, or via my
+helpers. YMMV.
+
+## Local Adaption
+
+- mtheme and metropolis changed a bit since I first used them
+- I started with a local modification I called m2; the package is still in
+the launchpad repo
+- I generally include a file `header.tex` from the YAML for color, font,
+  ... tweaking at the \LaTeX level, but as these are presentation-specific I
+  didn't include any changes here.
+
+_ _ _
+
+\LARGE Breakout page 
+
+## Using LaTeX Parts: Equations
+
+### Linear Model
+
+$$ \hat{\beta} = \text{argmin}_{b \in \mathbb{R}} S(b) = \left( \frac{1}{n} \sum_{i=1}^n x_i x_i^T \right)^{-1} \cdot \frac{1}{n} \sum_{i=1}^n x_i y_i  $$
+or in matrix form
+
+$$ \hat{\beta} = (X^TX)^{-1} X^T y $$
+
+
+## Using LaTeX Parts: Blocks
+
+As one example of falling back into \LaTeX, consider the example of
+three different block environments are pre-defined and may be styled
+with an optional background color.
+
+<!-- this sets the background -->
+\metroset{block=fill} 
+
+\begin{block}{Default}
+  Block content.
+\end{block}
+
+\begin{alertblock}{Alert}
+  Block content.
+\end{alertblock}
+
+\begin{exampleblock}{Example}
+  Block content.
+\end{exampleblock}
+
+## Finally
+
+### Going Forward
+
+- Questions etc: Open issue tickets [at the GitHub repo](https://github.com/eddelbuettel/samples-rmarkdown-metropolis/issues)
+- Pull requests welcome for bug fixes, extensions, examples, ...
+

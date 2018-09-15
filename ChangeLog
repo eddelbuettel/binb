@@ -1,0 +1,11 @@
+2018-09-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Initial pre-release version
+	* binb.R (metropolis): Process Metropolis theme
+	* inst/rmarkdown/templates/metropolis/skeleton/skeleton.Rmd:
+	Example skeleton taken from my samples=rmarkdown-metropolis repo
+	* inst/rmarkdown/templates/metropolis/resources/template.tex):
+	Generic template for beamer presentations
+
+
+
