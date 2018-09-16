@@ -1,10 +1,26 @@
+2018-09-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/binb.R (iqss): Process IQSS theme (translated to Markdown)
+
+	* inst/rmarkdown/templates/iqss/skeleton/: Style files adapted
+	from IQSS LaTeX example, along with png and pdf inputs used
+	* inst/rmarkdown/templates/iqss/resources/template.tex: Idem
+
+	* inst/rmarkdown/templates/metropolis/resources/template.tex: Switch
+	to rounded parenthesis in natbib
+
+	* vignettes/metropolisDemo.Rmd: Added extended RMarkdown demo
+	* vignettes/metropolis/demo.bib: Demo bibliography
+	* vignettes/metropolis/header.tex: Some extra definitions
+
 2018-09-15  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Initial pre-release version
-	* binb.R (metropolis): Process Metropolis theme
+	* binb.R (metropolis): Process Metropolis (translated to Markdown)
+	* man/metropolis.Rd: Documentation
 	* inst/rmarkdown/templates/metropolis/skeleton/skeleton.Rmd:
 	Example skeleton taken from my samples=rmarkdown-metropolis repo
-	* inst/rmarkdown/templates/metropolis/resources/template.tex):
+	* inst/rmarkdown/templates/metropolis/resources/template.tex:
 	Generic template for beamer presentations
 
 

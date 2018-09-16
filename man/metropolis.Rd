@@ -2,14 +2,24 @@
 % Please edit documentation in R/binb.R
 \name{metropolis}
 \alias{metropolis}
+\alias{iqss}
 \title{Binb is not Beamer - Metropolis-themed PDF Presentation}
 \usage{
 metropolis(toc = FALSE, slide_level = 2, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE, fig_caption = TRUE,
-  dev = "pdf", df_print = "default", fonttheme = "default",
-  highlight = "tango", keep_tex = FALSE, latex_engine = "xelatex",
-  citation_package = c("none", "natbib", "biblatex"), includes = NULL,
-  md_extensions = NULL, pandoc_args = NULL)
+  fig_width = 10, fig_height = 7, fig_crop = TRUE,
+  fig_caption = TRUE, dev = "pdf", df_print = "default",
+  fonttheme = "default", highlight = "tango", keep_tex = FALSE,
+  latex_engine = "xelatex", citation_package = c("none", "natbib",
+  "biblatex"), includes = NULL, md_extensions = NULL,
+  pandoc_args = NULL)
+
+iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
+  fig_width = 10, fig_height = 7, fig_crop = TRUE,
+  fig_caption = TRUE, dev = "pdf", df_print = "default",
+  fonttheme = "default", highlight = "haddock", keep_tex = FALSE,
+  latex_engine = "xelatex", citation_package = c("none", "natbib",
+  "biblatex"), includes = NULL, md_extensions = NULL,
+  pandoc_args = NULL)
 }
 \arguments{
 \item{toc}{A logical variable defaulting to \code{FALSE}.}
@@ -39,7 +49,7 @@ metropolis(toc = FALSE, slide_level = 2, incremental = FALSE,
 \item{latex_engine}{A character variable defaulting to \dQuote{xelatex}.}
 
 \item{citation_package}{An optional character variable with possible value
-\dQuote{none} (the default), \dQuote{natbib} or \dQuote{biblatex}.}
+\dQuote{none}, \dQuote{natbib} (the default), or \dQuote{biblatex}.}
 
 \item{includes}{An optional character variable defaulting to \code{NULL}.}
 

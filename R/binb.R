@@ -18,7 +18,7 @@
 ##' @param keep_tex A logical variable defaulting to \code{FALSE}.
 ##' @param latex_engine A character variable defaulting to \dQuote{xelatex}.
 ##' @param citation_package An optional character variable with possible value
-##' \dQuote{none} (the default), \dQuote{natbib} or \dQuote{biblatex}.
+##' \dQuote{none}, \dQuote{natbib} (the default), or \dQuote{biblatex}.
 ##' @param includes An optional character variable defaulting to \code{NULL}.
 ##' @param md_extensions An optional character variable defaulting to \code{NULL}.
 ##' @param pandoc_args An optional character variable defaulting to \code{NULL}.
@@ -41,7 +41,6 @@ metropolis <- function(toc = FALSE,
                        includes = NULL,
                        md_extensions = NULL,
                        pandoc_args = NULL) {
-
 
     template <- system.file("rmarkdown", "templates", "metropolis",
                             "resources", "template.tex",
@@ -68,6 +67,58 @@ metropolis <- function(toc = FALSE,
                                    pandoc_args = pandoc_args)
 
 }
+
+##' @rdname metropolis
+iqss <- function(toc = FALSE,
+                 slide_level = 3,
+                 incremental = FALSE,
+                 fig_width = 10,
+                 fig_height = 7,
+                 fig_crop = TRUE,
+                 fig_caption = TRUE,
+                 dev = 'pdf',
+                 df_print = "default",
+                 fonttheme = "default",
+                 highlight = "haddock",
+                 keep_tex = FALSE,
+                 latex_engine = "xelatex",
+                 citation_package = c("none", "natbib", "biblatex"),
+                 includes = NULL,
+                 md_extensions = NULL,
+                 pandoc_args = NULL) {
+
+    for (f in c("beamercolorthemeiqss.sty", "beamerfontthemeiqss.sty",
+                "beamerthemeiqss.sty", "header.png", "figs/"))
+        if (!file.exists(f))
+            file.copy(system.file("rmarkdown", "templates", "iqss", "skeleton", f, package="binb"),
+                      ".", recursive=TRUE)
+
+    template <- system.file("rmarkdown", "templates", "iqss",
+                            "resources", "template.tex",
+                            package="binb")
+
+    rmarkdown::beamer_presentation(template = template,
+                                   toc = toc,
+                                   slide_level = slide_level,
+                                   incremental = incremental,
+                                   fig_width = fig_width,
+                                   fig_height = fig_height,
+                                   fig_crop = fig_crop,
+                                   fig_caption = fig_caption,
+                                   dev = dev,
+                                   df_print = df_print,
+                                   theme = "iqss",
+                                   fonttheme = fonttheme,
+                                   highlight = highlight,
+                                   keep_tex = keep_tex,
+                                   latex_engine = latex_engine,
+                                   citation_package = citation_package,
+                                   includes = includes,
+                                   md_extensions = md_extensions,
+                                   pandoc_args = pandoc_args)
+
+}
+
 
 # Call rmarkdown::pdf_documet and mark the return value as inheriting pdf_document
 inherit_pdf_document <- function(...) {

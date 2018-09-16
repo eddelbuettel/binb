@@ -1,0 +1,398 @@
+---
+author: Matthias Vogelgesang
+title: Metropolis
+subtitle: A modern beamer theme
+institute: Center for modern beamer themes
+date: \today
+output: 
+  binb::metropolis:
+    citation_package: natbib
+    includes:
+      in_header: metropolis/header.tex
+bibliography: metropolis/demo.bib
+biblio-style: abbrvnat
+toc: true
+vignette: >
+  %\VignetteIndexEntry{binb Metropolis Demo}
+  %\VignetteKeywords{binb,vignette}
+  %\VignettePackage{binb}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+```{r,setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+# Introduction
+
+## Metropolis
+
+The \themename theme is a Beamer theme with minimal visual noise inspired
+by the [hsrm](https://github.com/hsrmbeamertheme/hsrmbeamertheme) Beamer
+Theme by Benjamin Weiss.
+
+Enable the theme (in \LaTeX) by loading
+
+```tex
+\documentclass{beamer}
+\usetheme{metropolis}
+```
+
+Note, that you have to have Mozilla's \emph{Fira Sans} font and XeTeX
+installed to enjoy this wonderful typography.
+
+\scriptsize In R you can of course use this package directly, see its documentation.
+
+## Sections
+
+Sections group slides of the same topic
+
+```
+## Elements
+```
+
+for which \themename provides a nice progress indicator \ldots
+
+
+# Title formats
+
+## Metropolis title formats
+
+\themename supports 4 different title formats:
+
+- Regular
+- \textsc{Small caps}
+- \textsc{all small caps}
+- ALL CAPS
+
+They can either be set at once for every title type or individually.
+
+
+<!-- \metroset{titleformat frame=smallcaps} -->
+<!-- ## Small caps -->
+
+<!-- This frame uses the \texttt{smallcaps} title format. -->
+
+<!-- \begin{alertblock}{Potential Problems} -->
+<!-- Be aware that not every font supports small caps. If for example you -->
+<!-- typeset your presentation with pdfTeX and the Computer Modern Sans Serif -->
+<!-- font, every text in small caps will be typeset with the Computer Modern -->
+<!-- Serif font instead.  -->
+<!-- \end{alertblock} -->
+
+
+
+
+<!-- \metroset{titleformat frame=allsmallcaps} -->
+<!-- ## All small caps -->
+
+<!-- This frame uses the \texttt{allsmallcaps} title format. -->
+
+<!-- \begin{alertblock}{Potential problems} -->
+<!-- As this title format also uses small caps you face the same problems as -->
+<!-- with the \texttt{smallcaps} title format. Additionally this format can -->
+<!-- cause some other problems. Please refer to the documentation if you -->
+<!-- consider using it. -->
+
+<!-- As a rule of thumb: just use it for plaintext-only titles. -->
+<!-- \end{alertblock} -->
+
+
+# Elements
+
+## Typography
+
+```
+The theme provides sensible defaults to
+\emph{emphasize} text, \alert{accent} parts
+or show \textbf{bold} results.
+```
+
+\begin{center}becomes\end{center}
+
+The theme provides sensible defaults to \emph{emphasize} text,
+\alert{accent} parts or show \textbf{bold} results.
+
+
+## Font feature test
+
+- Regular
+- \textit{Italic} (also _Italic_)
+- \textsc{Small Caps}
+- \textbf{Bold} (also **Bold**)
+- \textbf{\textit{Bold Italic}} (also **_Italic_**)
+- \textbf{\textsc{Bold Small Caps}}
+- \texttt{Monospace}
+- \texttt{\textit{Monospace Italic}}
+- \texttt{\textbf{Monospace Bold}}
+- \texttt{\textbf{\textit{Monospace Bold Italic}}}
+
+
+## Lists
+\begin{columns}[T,onlytextwidth]
+  \column{0.33\textwidth}
+    Items
+    \begin{itemize}
+      \item Milk \item Eggs \item Potatoes
+    \end{itemize}
+
+  \column{0.33\textwidth}
+    Enumerations
+    \begin{enumerate}
+      \item First, \item Second and \item Last.
+    \end{enumerate}
+
+  \column{0.33\textwidth}
+    Descriptions
+    \begin{description}
+      \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
+    \end{description}
+\end{columns}
+
+
+## Animation (using \LaTeX\ )
+
+\begin{itemize}[<+- | alert@+>]
+  \item \alert<4>{This is\only<4>{ really} important}
+  \item Now this
+  \item And now this
+\end{itemize}
+
+\bigskip
+\scriptsize This uses \LaTeX\ for aninmation. The next slides uses RMarkdown
+
+## Animation (using RMarkdown, plus one \LaTeX\ trick)
+
+::: incremental 
+
+- \alert<4>{This is\only<4>{ really} important}
+- Now this
+- And now this
+
+:::
+
+
+
+## Figures (using \LaTeX)
+
+\begin{figure}
+  \newcounter{density}
+  \setcounter{density}{20}
+  \begin{tikzpicture}
+    \def\couleur{alerted text.fg}
+    \path[coordinate] (0,0)  coordinate(A)
+                ++( 90:5cm) coordinate(B)
+                ++(0:5cm) coordinate(C)
+                ++(-90:5cm) coordinate(D);
+    \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
+    \foreach \x in {1,...,40}{%
+        \pgfmathsetcounter{density}{\thedensity+20}
+        \setcounter{density}{\thedensity}
+        \path[coordinate] coordinate(X) at (A){};
+        \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
+                            -- (C) coordinate[pos=.10](B)
+                            -- (D) coordinate[pos=.10](C)
+                            -- (X) coordinate[pos=.10](D);
+        \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
+    }
+  \end{tikzpicture}
+  \caption{Rotated square from
+  \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
+\end{figure}
+
+\scriptsize This used a \LaTeX\ feature. All RMarkdown features are also at our disposal.
+
+
+## Tables (using \LaTeX})
+
+\begin{table}
+  \caption{Largest cities in the world (source: Wikipedia)}
+  \begin{tabular}{@{} lr @{}}
+    \toprule
+    City & Population\\
+    \midrule
+    Mexico City & 20,116,842\\
+    Shanghai & 19,210,000\\
+    Peking & 15,796,450\\
+    Istanbul & 14,160,467\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\scriptsize This used a \LaTeX\ feature. All RMarkdown features are also at our disposal.
+
+
+## Blocks
+
+Three different block environments are pre-defined and may be styled with an
+optional background color.
+
+\begin{columns}[T,onlytextwidth]
+  \column{0.5\textwidth}
+    \begin{block}{Default}
+      Block content.
+    \end{block}
+
+    \begin{alertblock}{Alert}
+      Block content.
+    \end{alertblock}
+
+    \begin{exampleblock}{Example}
+      Block content.
+    \end{exampleblock}
+
+  \column{0.5\textwidth}
+
+     \metroset{block=fill}
+
+    \begin{block}{Default}
+      Block content.
+    \end{block}
+
+    \begin{alertblock}{Alert}
+      Block content.
+    \end{alertblock}
+
+    \begin{exampleblock}{Example}
+      Block content.
+    \end{exampleblock}
+
+\end{columns}
+
+\bigskip
+
+\scriptsize The right side uses the `\metroset{block=fill}` option. Blocks
+can also used in Markdown using `###` (if slide-level=2).
+
+
+## Math
+
+\begin{equation*}
+    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+\end{equation*}
+
+## Line plots
+
+\begin{figure}
+  \begin{tikzpicture}
+    \begin{axis}[
+      mlineplot,
+      width=0.9\textwidth,
+      height=6cm,
+    ]
+
+      \addplot {sin(deg(x))};
+      \addplot+[samples=100] {sin(deg(2*x))};
+
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+
+
+## Bar charts
+
+\begin{figure}
+  \begin{tikzpicture}
+    \begin{axis}[
+      mbarplot,
+      xlabel={Foo},
+      ylabel={Bar},
+      width=0.9\textwidth,
+      height=6cm,
+    ]
+
+    \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
+    \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
+    \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
+
+    \legend{lorem, ipsum, dolor}
+
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+
+
+## Quotes
+
+> Veni, Vidi, Vici
+
+## References
+
+Some references \citep{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
+
+\bigskip
+
+\scriptsize `allowframebreaks` is not used or needed, also changed `\cite` to
+`\citep`, and defaulted `natbib` to option `[round]`.
+
+# Conclusion
+
+## Summary
+
+Get the source of this theme and the demo presentation from
+
+\begin{center}\url{https://github.com/matze/mtheme}\end{center}
+
+The theme \emph{itself} is licensed under a [Creative Commons
+Attribution-ShareAlike 4.0 International
+License](http://creativecommons.org/licenses/by-sa/4.0/)
+
+\begin{center}\ccbysa\end{center}
+
+\scriptsize Source and documentation for the RMarkdown variant are at \url{https://github.com/eddelbuettel/binb}.
+
+_ _ _
+
+Questions?
+
+
+
+
+## Backup slides
+
+Sometimes, it is useful to add slides at the end of your presentation to
+refer to during audience questions.
+
+The best way to do this is to include the `appendixnumberbeamer`
+package in your preamble and call `\appendix` before your backup slides.
+
+\themename will automatically turn off slide numbering and progress bars for
+slides in the appendix.
+
+\scriptsize Calling `\appendix` currently leads to an error in when using `binb`.
+
+## R Appendix: R Figure Example
+
+The following code generates the plot on the next slide (taken from
+`help(bxp)` and modified slightly):
+
+```{r pressureCode, eval=FALSE}
+library(stats)
+set.seed(753)
+bx.p <- boxplot(split(rt(100, 4),
+                      gl(5, 20)), plot=FALSE)
+bxp(bx.p, notch = FALSE, boxfill = "lightblue",
+    frame = FALSE, outl = TRUE,
+    main = "Example from help(bxp)")
+```  
+
+## R Appendix: R Figure Example
+  
+```{r pressureFig, echo=FALSE}
+library(stats)
+set.seed(753)
+bx.p <- boxplot(split(rt(100, 4),
+                      gl(5, 20)), plot=FALSE)
+bxp(bx.p, notch = FALSE, boxfill = "lightblue",
+    frame = FALSE, outl = TRUE,
+    main = "Example from help(bxp)")
+```  
+
+## R Appendix: R Table Example
+  
+A simple `knitr::kable` example:  
+
+```{r kableEx}
+knitr::kable(mtcars[1:5, 1:8],
+             caption="(Parts of) the mtcars dataset")
+```

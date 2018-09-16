@@ -16,4 +16,4 @@ Imports: rmarkdown, knitr
 VignetteBuilder: knitr
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

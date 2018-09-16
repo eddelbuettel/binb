@@ -1,3 +1,3 @@
-export("metropolis")
+export("metropolis", "iqss")
 import("knitr")
 import("rmarkdown")

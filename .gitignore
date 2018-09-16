@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+vignettes/*_cache
+vignettes/*_files
+vignettes/auto
+*auto/
+*.tar.gz
