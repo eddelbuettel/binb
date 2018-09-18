@@ -1,3 +1,8 @@
+2018-09-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Added initial README
+	* figures/: Four support pdf and gif files used by README
+
 2018-09-16  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/binb.R (iqss): Process IQSS theme (translated to Markdown)
