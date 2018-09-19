@@ -2,4 +2,4 @@
 ^\.Rproj\.user$
 ^localTests
 .*\.tar\.gz$
-^figures
+^docs
