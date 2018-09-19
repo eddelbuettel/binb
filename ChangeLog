@@ -1,3 +1,15 @@
+2018-09-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/iqssDemo.Rmd: Added vignette for IQSS, based on skeleton
+
+	* vignettes/*: Addedd required IQSS support files, figures in iqss/
+
+	* inst/rmarkdown/templates/iqss/skeleton/skeleton.Rmd: Updated
+ 	* inst/rmarkdown/templates/metropolis/skeleton/skeleton.Rmd: Idem
+
+	* R/binb.R: Manual page update
+	* man/metropolis.Rd: Idem
+
 2018-09-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Added initial README

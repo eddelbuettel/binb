@@ -6,6 +6,11 @@ title: IQSS Beamer Class Demonstration
 date: \today
 institute: IQSS 
 output: binb::iqss
+vignette: >
+  %\VignetteIndexEntry{binb IQSS Demo}
+  %\VignetteKeywords{binb,vignette}
+  %\VignettePackage{binb}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 
@@ -14,6 +19,9 @@ output: binb::iqss
 ## Some of Gary's Examples
 
 ### What's this course about? 
+
+
+::: incremental 
 
 - \alert{Specific statistical methods for many research problems}
       - How to learn (or create) new methods
@@ -25,10 +33,12 @@ output: binb::iqss
     whatever is useful
 - $\leadsto$ \alert{Outline and class materials:}
     - \mbox{{\huge\parbox[b][.5in][t]{1in}{\alert{j.mp/G2001}}}
-        $\qquad\qquad$\includegraphics[width=.95in]{figs/phbAr.png}}
+        $\qquad\qquad$\includegraphics[width=.95in]{iqss/phbAr.png}}
     - The syllabus gives topics, not a weekly plan.
     - We will go as fast as possible subject to everyone following along
     - We cover different amounts of material each week
+
+:::
 
 ### How much math will you scare us with?
 
@@ -44,6 +54,9 @@ output: binb::iqss
         - Includes ``how to'' computation
         - $\leadsto$ Fewer proofs, more concepts, better practical knowledge
 - Do you have the background for this class? 
+
+. . .
+
 \alert{A Test: What's this?
     \begin{align*}
       b=(X'X)^{-1}X'y
@@ -52,7 +65,7 @@ output: binb::iqss
 
 ### Systematic Components: Examples
 
-\includegraphics[width=8cm]{figs/functionalForms}
+\includegraphics[width=8cm]{iqss/functionalForms}
 
 - \alertb{$E(Y_i) \equiv \mu_i = X_i\beta = \beta_0 +
       \beta_1X_{1i} +\dots+\beta_kX_{ki}$}
@@ -66,6 +79,53 @@ output: binb::iqss
       with different meaning
 
 
+### Negative Binomial Derivation
+
+\uncover<+->{Recall:}
+
+\begin{equation*}
+    \uncover<+->{\Pr(A|B)=\frac{\Pr(AB)}{\Pr(B)} \implies 
+        \alertb{\Pr(AB)}=\alerte{\Pr(A|B)}\alertd{\Pr(B)}}
+\end{equation*}
+
+\alertb<1-1>{one}
+\alertc<2-2>{two}
+\alertd<3-3>{three}
+
+\begin{align*}
+  \uncover<+->{\text{NegBin}(y|\phi,\sigma^2) &= \int_0^\infty
+    \alerte{\text{Poisson}(y|\lambda)}
+    \times\alertd{\text{gamma}(\lambda|\phi,\sigma^2)}d\lambda\\}
+  \uncover<+->{&= \int_0^\infty
+    \alertb{\P(y,\lambda|\phi,\sigma^2) }d\lambda\\}
+  \uncover<+->{&=
+    \frac{\Gamma\left(\frac{\phi}{\sigma^2-1}+y_i\right)}
+    {y_i!\Gamma\left(\frac{\phi}{\sigma^2-1}\right)}
+    \left(\frac{\sigma^2-1}{\sigma^2}\right)^{y_i}
+    \left(\sigma^2\right)^{\frac{-\phi}{\sigma^2-1}}}
+\end{align*}
+
+
+# Other Features
+
+## Structural Features
+
+### Structural Features
+
+#### Levels of Structure
+
+- usual \LaTeX\ \textbackslash\ section, \textbackslash\ subsection commands
+- `frame` environments provide slides
+- `block` environments divide slides into logical sections
+- `columns` environments divide slides vertically (example later)
+- overlays (\`a la prosper) change content of slides dynamically
+  
+#### \alertc{Overlay Alerts}
+
+On the first overlay, \alert<1>{this text} is highlighted (or \emph{alerted}).  
+On the second, \alert<2>{this text} is. 
+
+
 ### Code blocks
 
 \footnotesize
@@ -75,16 +135,22 @@ output: binb::iqss
 hello <- function(name) paste("hello", name)
 ```
  
+. . .
+
 ```python
 # Say hello in Python
 def hello(name):
 return("Hello" + " " + name)
 ```
 
+. . .
+
 ```haskell
 -- Say hello in Haskell
 hello name = "Hello" ++ " " ++ name
 ```
+
+. . .
 
 ```c
 /* Say hello in C */
@@ -96,6 +162,7 @@ int main()
   printf("Hello %s", name);
   return(0);
 }
+```
 
 \normalsize
 
@@ -125,7 +192,7 @@ int main()
 - pgf graphics framework easy to use
 - include external JPEG/PNG/PDF figures
 - output directly to pdf: no PostScript hurdles
-- detailed User Manual (with good presentation advice, too)
+- detailed User's Manual (with good presentation advice, too)
 
 
 ### Theorems and Proofs
@@ -153,51 +220,29 @@ $2=2$.
 #### \alertc{Example block}
 The set $\{1,2,3,5\}$ has four elements.
 
-# RMarkdown Examples
 
-### R Figure 
+# Appendix
 
-The following code generates the plot on the next slide (taken from
-`help(bxp)` and modified slightly):
+---
 
-```{r pressureCode, eval=FALSE}
-library(stats)
-set.seed(753)
-bx.p <- boxplot(split(rt(100, 4),
-                      gl(5, 20)), plot=FALSE)
-bxp(bx.p, notch = FALSE, boxfill = "lightblue",
-    frame = FALSE, outl = TRUE,
-    main = "Example from help(bxp)")
-```  
+Backup Slides
 
+<!-- \subsection{More stuff} -->
 
-### R Figure 
-  
-```{r pressureFig, echo=FALSE}
-library(stats)
-set.seed(753)
-bx.p <- boxplot(split(rt(100, 4),
-                      gl(5, 20)), plot=FALSE)
-bxp(bx.p, notch = FALSE, boxfill = "lightblue",
-    frame = FALSE, outl = TRUE,
-    main = "Example from help(bxp)")
-```  
+---
 
-### R Table 
-  
-A simple `knitr::kable` example:  
+Details
 
-\small
+---
 
-```{r kableEx}
-knitr::kable(mtcars[1:5, 1:8],
-             caption="(Parts of) the mtcars dataset")
-```
+Text omitted in main talk.
 
-### Resources
+<!-- \subsection{Even more additional material} -->
 
-#### For more information:
-- See the [IQSS repository](https://github.com/IQSS/iqss-beamer-theme) for more on the IQSS them
-- See the [RMarkdown repository](https://github.com/rstudio/rmarkdown) for more on RMarkdown
-- See the [binb repository](https://github.com/eddelbuettel/binb) for more on binb 
-- See the [binb vignettes](https://github.com/eddelbuettel/binb/vignettes) for more examples.
+---
+
+More details
+
+---
+
+Even more details

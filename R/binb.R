@@ -1,11 +1,13 @@
-##' A template for RMarkdown-based Beamer presentations in the \sQuote{Metropolis}
-##' style by Matthias Vogelgesang and others.
+##' Templates for RMarkdown-based Beamer PDF presentations supporting
+##' the \sQuote{Metropolis} style by Matthias Vogelgesang and others,
+##' and the \sQuote{IQSS} style by Ista Zahn and Gary King.
 ##'
-##' Not all options and customizations available at the LaTeX level are implemented
-##' yet.
-##' @title Binb is not Beamer - Metropolis-themed PDF Presentation
+##' Note that not all options and customizations available at the LaTeX
+##' level are implemented or supported yet.
+##' @title Binb is not Beamer - PDF Presentation Themes
 ##' @param toc A logical variable defaulting to \code{FALSE}.
-##' @param slide_level A numeric variable defaulting to two.
+##' @param slide_level A numeric variable defaulting to two for
+##' \sQuote{Metrpolis} and three for \sQuote{IQSS}.
 ##' @param incremental A logical variable defaulting to \code{FALSE}.
 ##' @param fig_width A numeric variable defaulting to ten.
 ##' @param fig_height A numeric variable defaulting to seven.
@@ -24,6 +26,13 @@
 ##' @param pandoc_args An optional character variable defaulting to \code{NULL}.
 ##' @return RMarkdown content processed for rendering.
 ##' @author Dirk Eddelbuettel
+##' @examples
+##' \dontrun{
+##' library(rmarkdown)
+##' draft("myslides.Rmd", template="metropolis", package="binb", edit=FALSE)
+##' setwd("myslides")       ## template creates a new subdir
+##' render("myslides.Rmd")
+##' }
 metropolis <- function(toc = FALSE,
                        slide_level = 2,
                        incremental = FALSE,

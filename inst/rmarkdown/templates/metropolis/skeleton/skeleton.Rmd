@@ -1,99 +1,102 @@
 ---
-author: Your Name Here and Some Other Person
-title: "Something really clever here: \\newline And maybe a second line"
-subtitle: You can also have a subtitle
-date: 2018-09-15
+title: A minimal example
+subtitle: With a subtitle
+author: Matthias Vogelgesang
+date: \today
+institute: Centre for Modern Beamer Themes
 output: binb::metropolis
+fontsize: 12pt
 ---
 
 ```{r,setup, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE)
 ```
 
-# A Section Header
+# First Section
 
-## A Slide Header
+## First Frame
 
-### A Subtitle
+Hello, world!
 
-- Point A
-- Point B
-- Point C
+# Second Section
 
-# Principal Resources
+## Second Frame
 
-## Metropolis
+### Bulleted Lists
+- Element A
+- Element B
+    - B.1
+    - B.2
+- Element C    
 
-### Main Repos
+# Elements
 
-- [Official GitHub Repo of Metropolis](https://github.com/matze/mtheme)
-  (formerly mtheme); older version in TeXLive 
-- [My GitHub Repo for a local Ubuntu package of Metropolis](https://github.com/eddelbuettel/pkg-latex-metropolis) -- formerly mtheme
-- [My GitHub Repo for a local Ubuntu package for the Fira font](https://github.com/eddelbuettel/pkg-fonts-fira) 
+## Typography
 
-## Ubuntu and Launchpad
+```
+The theme provides sensible defaults to
+\emph{emphasize} text, \alert{accent} parts
+or show \textbf{bold} results.
 
-### Briefly
+In Markdown, you can also use _emphasize_ and **bold**.
+```
 
-- The packages which can be built (ie not Fira as it needs external fonts
-  which we cannot download during build) are
-  [in this repo](https://launchpad.net/~edd/+archive/ubuntu/misc/+packages)
-- If you're not on Ubuntu, it is probably more work to get
-    - Metropolis into your \LaTeX environment
-    - the Fira font into your \LaTeX environment
-- I *did* try without (on plain Ubuntu 16.04) and it _builds_ but looks less
-crisp
-- So for the time being you probably want these fresh from source, or via my
-helpers. YMMV.
+\begin{center}becomes\end{center}
 
-## Local Adaption
+The theme provides sensible defaults to \emph{emphasize} text,
+\alert{accent} parts or show \textbf{bold} results.
 
-- mtheme and metropolis changed a bit since I first used them
-- I started with a local modification I called m2; the package is still in
-the launchpad repo
-- I generally include a file `header.tex` from the YAML for color, font,
-  ... tweaking at the \LaTeX level, but as these are presentation-specific I
-  didn't include any changes here.
-
-_ _ _
-
-\LARGE Breakout page 
-
-## Using LaTeX Parts: Equations
-
-### Linear Model
-
-$$ \hat{\beta} = \text{argmin}_{b \in \mathbb{R}} S(b) = \left( \frac{1}{n} \sum_{i=1}^n x_i x_i^T \right)^{-1} \cdot \frac{1}{n} \sum_{i=1}^n x_i y_i  $$
-or in matrix form
-
-$$ \hat{\beta} = (X^TX)^{-1} X^T y $$
+In Markdown, you can also use _emphasize_ and **bold**.
 
 
-## Using LaTeX Parts: Blocks
+## Math
 
-As one example of falling back into \LaTeX, consider the example of
-three different block environments are pre-defined and may be styled
-with an optional background color.
+\begin{equation*}
+    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+\end{equation*}
 
-<!-- this sets the background -->
-\metroset{block=fill} 
 
-\begin{block}{Default}
-  Block content.
-\end{block}
+## R Figure Example
 
-\begin{alertblock}{Alert}
-  Block content.
-\end{alertblock}
+The following code generates the plot on the next slide (taken from
+`help(bxp)` and modified slightly):
 
-\begin{exampleblock}{Example}
-  Block content.
-\end{exampleblock}
+```{r pressureCode, eval=FALSE}
+library(stats)
+set.seed(753)
+bx.p <- boxplot(split(rt(100, 4),
+                      gl(5, 20)), plot=FALSE)
+bxp(bx.p, notch = FALSE, boxfill = "lightblue",
+    frame = FALSE, outl = TRUE,
+    main = "Example from help(bxp)")
+```  
 
-## Finally
 
-### Going Forward
+## R Figure Example
+  
+```{r pressureFig, echo=FALSE}
+library(stats)
+set.seed(753)
+bx.p <- boxplot(split(rt(100, 4),
+                      gl(5, 20)), plot=FALSE)
+bxp(bx.p, notch = FALSE, boxfill = "lightblue",
+    frame = FALSE, outl = TRUE,
+    main = "Example from help(bxp)")
+```  
 
-- Questions etc: Open issue tickets [at the GitHub repo](https://github.com/eddelbuettel/samples-rmarkdown-metropolis/issues)
-- Pull requests welcome for bug fixes, extensions, examples, ...
+## R Table Example
+  
+A simple `knitr::kable` example:  
 
+```{r kableEx}
+knitr::kable(mtcars[1:5, 1:8],
+             caption="(Parts of) the mtcars dataset")
+```
+
+## Resources
+
+### For more information:
+- See the [Metropolis repository](https://github.com/matze/mtheme) for more on Metropolis
+- See the [RMarkdown repository](https://github.com/rstudio/rmarkdown) for more on RMarkdown
+- See the [binb repository](https://github.com/eddelbuettel/binb) for more on binb 
+- See the [binb vignettes](https://github.com/eddelbuettel/binb/vignettes) for more examples.

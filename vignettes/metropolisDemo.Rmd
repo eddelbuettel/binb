@@ -396,3 +396,4 @@ A simple `knitr::kable` example:
 knitr::kable(mtcars[1:5, 1:8],
              caption="(Parts of) the mtcars dataset")
 ```
+

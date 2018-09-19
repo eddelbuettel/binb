@@ -3,7 +3,7 @@
 \name{metropolis}
 \alias{metropolis}
 \alias{iqss}
-\title{Binb is not Beamer - Metropolis-themed PDF Presentation}
+\title{Binb is not Beamer - PDF Presentation Themes}
 \usage{
 metropolis(toc = FALSE, slide_level = 2, incremental = FALSE,
   fig_width = 10, fig_height = 7, fig_crop = TRUE,
@@ -24,7 +24,8 @@ iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
 \arguments{
 \item{toc}{A logical variable defaulting to \code{FALSE}.}
 
-\item{slide_level}{A numeric variable defaulting to two.}
+\item{slide_level}{A numeric variable defaulting to two for
+\sQuote{Metrpolis} and three for \sQuote{IQSS}.}
 
 \item{incremental}{A logical variable defaulting to \code{FALSE}.}
 
@@ -61,12 +62,21 @@ iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
 RMarkdown content processed for rendering.
 }
 \description{
-A template for RMarkdown-based Beamer presentations in the \sQuote{Metropolis}
-style by Matthias Vogelgesang and others.
+Templates for RMarkdown-based Beamer PDF presentations supporting
+the \sQuote{Metropolis} style by Matthias Vogelgesang and others,
+and the \sQuote{IQSS} style by Ista Zahn and Gary King.
 }
 \details{
-Not all options and customizations available at the LaTeX level are implemented
-yet.
+Note that not all options and customizations available at the LaTeX
+level are implemented or supported yet.
+}
+\examples{
+\dontrun{
+library(rmarkdown)
+draft("myslides.Rmd", template="metropolis", package="binb", edit=FALSE)
+setwd("myslides")       ## template creates a new subdir
+render("myslides.Rmd")
+}
 }
 \author{
 Dirk Eddelbuettel
