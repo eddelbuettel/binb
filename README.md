@@ -36,10 +36,10 @@ output: binb::metropolis
 Hello, world!
 ````
 
-It creates a [three-page pdf file](figures/metropolis_minimal.pdf) which we converted into this 
+It creates a [three-page pdf file](https://eddelbuettel.github.io/binb/metropolis_minimal.pdf) which we converted into this 
 animated gif (which loses font crispness, sadly):
 
-![](figures/metropolis_minimal.gif)
+![](https://eddelbuettel.github.io/binb/metropolis_minimal.gif)
 
 
 #### IQSS
@@ -74,10 +74,10 @@ Another planet!
 
 ````
 
-This creates this [pdf file](figures/iqss_minimal.pdf) which we converted into this 
+This creates this [pdf file](https://eddelbuettel.github.io/binb/iqss_minimal.pdf) which we converted into this 
 animated gif (also losing font crispness):
 
-![](figures/iqss_minimal.gif)
+![](https://eddelbuettel.github.io/binb/iqss_minimal.gif)
 
         
 ### Status

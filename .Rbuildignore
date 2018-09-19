@@ -3,3 +3,5 @@
 ^localTests
 .*\.tar\.gz$
 ^docs
+^vignettes/.*_cache
+^vignettes/.*_files

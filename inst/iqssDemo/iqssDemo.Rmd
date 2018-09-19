@@ -33,7 +33,7 @@ vignette: >
     whatever is useful
 - $\leadsto$ \alert{Outline and class materials:}
     - \mbox{{\huge\parbox[b][.5in][t]{1in}{\alert{j.mp/G2001}}}
-        $\qquad\qquad$\includegraphics[width=.95in]{iqss/phbAr.png}}
+        $\qquad\qquad$\includegraphics[width=.95in]{figs/phbAr.png}}
     - The syllabus gives topics, not a weekly plan.
     - We will go as fast as possible subject to everyone following along
     - We cover different amounts of material each week
@@ -65,7 +65,7 @@ vignette: >
 
 ### Systematic Components: Examples
 
-\includegraphics[width=8cm]{iqss/functionalForms}
+\includegraphics[width=8cm]{figs/functionalForms}
 
 - \alertb{$E(Y_i) \equiv \mu_i = X_i\beta = \beta_0 +
       \beta_1X_{1i} +\dots+\beta_kX_{ki}$}
