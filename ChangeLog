@@ -1,3 +1,10 @@
+2018-09-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/iqssDemo/: Move iqss vignette material here as vignette
+	processing requires the Libertinus font which may not be present
+
+	* .travis.yml (dist): Added simple Travis CI support
+
 2018-09-18  Dirk Eddelbuettel  <edd@debian.org>
 
 	* vignettes/iqssDemo.Rmd: Added vignette for IQSS, based on skeleton
