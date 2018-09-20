@@ -5,9 +5,10 @@ Binb is not Beamer: Stylish pdf Presentation from RMarkdown
 ### Motivation
 
 The [Beamer](https://github.com/josephwright/beamer) package is very popular for making pdf
-presentation from LaTeX, and also supported from Markdown and
-[RMarkdown](https://github.com/rstudio/rmarkdown). This package provides two custom (LaTeX) themes
-for [Beamer](https://github.com/josephwright/beamer) adapted for RMarkdown use:
+presentations from LaTeX, and also supported from Markdown and
+[RMarkdown](https://github.com/rstudio/rmarkdown). This package (currently)
+provides functionality to use two custom (LaTeX) themes for
+[Beamer](https://github.com/josephwright/beamer) directly via RMarkdown: 
 - [Metropolis](https://github.com/matze/mtheme) (formerly `mtheme`) by Matthias Vogelgesang
 - [IQSS](https://github.com/IQSS/iqss-beamer-theme) by Ista Zahn
 
@@ -82,18 +83,19 @@ animated gif (also losing font crispness):
         
 ### Status
 
-The package is (currently) fairly new and not yet on [CRAN](https://cran.r-project.org/). 
+The package is (currently) fairly new and susceptible to change, but on
+[CRAN](https://cran.r-project.org/).
 
 ### Usage 
 
-As the package is not yet CRAN, you must install from GitHub _e.g._ via
+The package is on [CRAN](https://cran.r-project.org/) and can be installed
+via a standard
 
 ```r
-install.packages("remotes")  # if needed
-remotes::install_github("eddelbuettel/binb")
+install.packages("binb")
 ```
 
-to install it from CRAN, and then use as a Markdown template via RStudio, or use code such as
+and can then be used as a Markdown template via RStudio, or via code such as
 
 ```r
 library(rmarkdown)
@@ -102,7 +104,7 @@ setwd("myslides")  ## template creates a new subdir
 render("myslides.Rmd")
 ```
 
-to create a first draft of a new `myslides.Rmd`.        
+to create a first draft of a new `myslides.Rmd`.
 
 Once installed, the above code examples should work as expected.
 
@@ -131,7 +133,7 @@ and [Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus), respecti
 
 ### Authors
 
-Dirk Eddelbuettel wrote this package. Ista Zahn authored the included IQSS Beamer Theme.
+Dirk Eddelbuettel and Ista Zahn.
 
 ### License
 

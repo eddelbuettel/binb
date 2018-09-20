@@ -5,3 +5,4 @@
 ^docs
 ^vignettes/.*_cache
 ^vignettes/.*_files
+^.travis.yml$

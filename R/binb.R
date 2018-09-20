@@ -3,8 +3,12 @@
 ##' and the \sQuote{IQSS} style by Ista Zahn and Gary King.
 ##'
 ##' Note that not all options and customizations available at the LaTeX
-##' level are implemented or supported yet.
+##' level are implemented or supported yet.  A number of styling options
+##' could be exposed by setting YAML meta-data in the header for either
+##' style. This needs more testing and documentation.
+##'
 ##' @title Binb is not Beamer - PDF Presentation Themes
+##'
 ##' @param toc A logical variable defaulting to \code{FALSE}.
 ##' @param slide_level A numeric variable defaulting to two for
 ##' \sQuote{Metrpolis} and three for \sQuote{IQSS}.
@@ -24,8 +28,23 @@
 ##' @param includes An optional character variable defaulting to \code{NULL}.
 ##' @param md_extensions An optional character variable defaulting to \code{NULL}.
 ##' @param pandoc_args An optional character variable defaulting to \code{NULL}.
-##' @return RMarkdown content processed for rendering.
+##'
+##' @section IQSS Details: We currently set \code{slide_level} to three to use
+##' the same appearance as the LaTeX demo. This means section and sub-section headers
+##' use one and two hash marks, new slides use three, and \dQuote{box} environments
+##' start with four. More commonly, Beamer theme use two and work without subsections.
+##'
+##' @seealso Three other packages also offer RMarkdown interfaces to LaTeX
+##' (or HTML) content: \code{\link[tint]{tint}} for Tufte-style pdf and html,
+##' \code{\link[pinp]{pinp}} for two-column pdf vignettes, and
+##' \code{\link[linl]{linl}} for LaTeX letters.
+##'
+##' @return RMarkdown content processed is returned for use by the
+##' \code{\link[rmarkdown]{render}} function but the function is invoked
+##' for it side effect of creating the pdf file.
+##'
 ##' @author Dirk Eddelbuettel
+##'
 ##' @examples
 ##' \dontrun{
 ##' library(rmarkdown)

@@ -1,5 +1,9 @@
 2018-09-19  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Date, Version): Initial release 0.0.1
+
+	* R/binb.R: Expanded manual page
+
 	* inst/iqssDemo/: Move iqss vignette material here as vignette
 	processing requires the Libertinus font which may not be present
 
