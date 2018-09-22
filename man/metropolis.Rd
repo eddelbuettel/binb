@@ -3,6 +3,7 @@
 \name{metropolis}
 \alias{metropolis}
 \alias{iqss}
+\alias{presento}
 \title{Binb is not Beamer - PDF Presentation Themes}
 \usage{
 metropolis(toc = FALSE, slide_level = 2, incremental = FALSE,
@@ -14,6 +15,14 @@ metropolis(toc = FALSE, slide_level = 2, incremental = FALSE,
   pandoc_args = NULL)
 
 iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
+  fig_width = 10, fig_height = 7, fig_crop = TRUE,
+  fig_caption = TRUE, dev = "pdf", df_print = "default",
+  fonttheme = "default", highlight = "haddock", keep_tex = FALSE,
+  latex_engine = "xelatex", citation_package = c("none", "natbib",
+  "biblatex"), includes = NULL, md_extensions = NULL,
+  pandoc_args = NULL)
+
+presento(toc = FALSE, slide_level = 2, incremental = FALSE,
   fig_width = 10, fig_height = 7, fig_crop = TRUE,
   fig_caption = TRUE, dev = "pdf", df_print = "default",
   fonttheme = "default", highlight = "haddock", keep_tex = FALSE,

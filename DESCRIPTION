@@ -1,8 +1,8 @@
 Package: binb
 Type: Package
 Title: 'binb' is not 'Beamer'
-Version: 0.0.1
-Date: 2018-09-19
+Version: 0.0.1.1
+Date: 2018-09-22
 Author: Dirk Eddelbuettel and Ista Zahn
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A collection of 'LaTeX' styles using 'Beamer' customization for
