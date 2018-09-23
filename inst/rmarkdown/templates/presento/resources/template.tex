@@ -1,6 +1,6 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
-\documentclass[$if(fontsize)$$fontsize,$$else$14pt,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$,$else$14pt,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
@@ -245,9 +245,9 @@ $if(title)$
 }
 $endif$
 $if(author)$
-\newcommand{\myName}{\largetext{\color{orange}{$for(author)$$author$$sep$ \and $endfor$}
+\newcommand{\myName}{\largetext{\color{orange}{$for(author)$$author$$sep$ \and $endfor$}}
   $if(address)$ \\\setnote{$address$} $endif$
-}}
+}
 $endif$
 \newcommand{\myDetails}{\setnote{\today}}
 
