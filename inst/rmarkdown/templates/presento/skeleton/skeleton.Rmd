@@ -1,10 +1,9 @@
 ---
 author: Ratul Saha
 address: www.ratulsaha.com
-title: Presento
+title: PRESENTO
 subtitle: clean, simple and extensible
 date: \today
-fontsize: 17pt
 output: binb::presento
 ---
 

@@ -1,3 +1,18 @@
+2018-09-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/presento/resources/template.tex: Do not
+	set default font feature as presento is scaled up; default to 14pt
+
+2018-09-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Minor release 0.0.1.1
+
+	* R/binb.R: Code and documentation update to support presento
+	* man/metropolis.Rd: Idem
+
+	* inst/rmarkdown/templates/presento/: Added support files for
+	'presento' theme by Ratul Saha translated from LaTeX to RMarkdown
+
 2018-09-19  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Initial release 0.0.1
