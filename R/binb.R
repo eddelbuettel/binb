@@ -118,10 +118,63 @@ iqss <- function(toc = FALSE,
     for (f in c("beamercolorthemeiqss.sty", "beamerfontthemeiqss.sty",
                 "beamerthemeiqss.sty", "header.png", "figs/"))
         if (!file.exists(f))
-            file.copy(system.file("rmarkdown", "templates", "iqss", "skeleton", f, package="binb"),
+            file.copy(system.file("rmarkdown", "templates", "iqss", "skeleton",
+                                  f, package="binb"),
                       ".", recursive=TRUE)
 
     template <- system.file("rmarkdown", "templates", "iqss",
+                            "resources", "template.tex",
+                            package="binb")
+
+    rmarkdown::beamer_presentation(template = template,
+                                   toc = toc,
+                                   slide_level = slide_level,
+                                   incremental = incremental,
+                                   fig_width = fig_width,
+                                   fig_height = fig_height,
+                                   fig_crop = fig_crop,
+                                   fig_caption = fig_caption,
+                                   dev = dev,
+                                   df_print = df_print,
+                                   theme = "iqss",
+                                   fonttheme = fonttheme,
+                                   highlight = highlight,
+                                   keep_tex = keep_tex,
+                                   latex_engine = latex_engine,
+                                   citation_package = citation_package,
+                                   includes = includes,
+                                   md_extensions = md_extensions,
+                                   pandoc_args = pandoc_args)
+
+}
+
+
+##' @rdname metropolis
+presento <- function(toc = FALSE,
+                     slide_level = 2,
+                     incremental = FALSE,
+                     fig_width = 10,
+                     fig_height = 7,
+                     fig_crop = TRUE,
+                     fig_caption = TRUE,
+                     dev = 'pdf',
+                     df_print = "default",
+                     fonttheme = "default",
+                     highlight = "haddock",
+                     keep_tex = FALSE,
+                     latex_engine = "xelatex",
+                     citation_package = c("none", "natbib", "biblatex"),
+                     includes = NULL,
+                     md_extensions = NULL,
+                     pandoc_args = NULL) {
+
+    for (f in c("presento.sty", "images/"))
+        if (!file.exists(f))
+            file.copy(system.file("rmarkdown", "templates",
+                                  "presento", "skeleton", f, package="binb"),
+                      ".", recursive=TRUE)
+
+    template <- system.file("rmarkdown", "templates", "presento",
                             "resources", "template.tex",
                             package="binb")
 
