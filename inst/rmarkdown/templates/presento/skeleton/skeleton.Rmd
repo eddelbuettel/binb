@@ -9,18 +9,18 @@ output: binb::presento
 
 ## Presento
 
-- \begin{center}\largetext{The design is \underline{clean}}\end{center}
-- \item \begin{center}\largetext{The rules are \underline{simple}}\end{center}
+- \begin{center}\largetext{The design is \underline{clean}}\end{center}    \bigskip
+- \begin{center}\largetext{The rules are \underline{simple}}\end{center}   \bigskip
 - \item \begin{center}\largetext{The code is \underline{extensible}}\end{center}
 
 
 ## Open Source Fonts
 
--  \montserratfont This is Montserrat
--  \notosansfont This is Noto Sans
--  \latolightfont This is Lato (light)
--  \inconsolatafont This is inconsolata
--  \textsc{This is Alegreya Sans small caps}
+-  \montserratfont This is \textsc{Montserrat}	\bigskip
+-  \notosansfont This is \textsc{Noto Sans}		\bigskip
+-  \latolightfont This is Lato (light)          \bigskip
+-  \inconsolatafont This is inconsolata         \bigskip
+-  \textsc{This is Alegreya Sans small caps}    \bigskip
 
 
 ## Color Palette
@@ -31,12 +31,14 @@ output: binb::presento
 
 ____
 
-\setbeamercolor{background canvas}{bg=\colorgreen}
-\centering{\hugetext{BIG BOLD TEXT} \bigskip \tiny but background color does not work}
+\begin{center}
+ \hugetext{BIG BOLD TEXT} 
+ \medskip 
+ \small but background color does not work
+\end{center}
 
+____
 
-----
-<!-- maybe this could be wrapped into one latex command -->
 \tikz[overlay,remember picture] \node[opacity=0.8, at=(current page.center)]{%
   \includegraphics[width=\paperwidth]{images/skeleton}};
 \begin{textblock}{7}(7,2.5)

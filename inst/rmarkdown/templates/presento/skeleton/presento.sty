@@ -28,10 +28,11 @@
 
 % font families
 % DEdd: removed path, set Lato to 'Lato-Light', set Montserrat to Bold
+%       also set AlegreyaSansSC font for lato and inconsolate
 \newfontfamily{\montserratfont}[BoldFont=Montserrat-Bold]{Montserrat-Bold}
 \newfontfamily{\notosansfont}[BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
-\newfontfamily{\latolightfont}{Lato-Light}
-\newfontfamily{\inconsolatafont}{Inconsolata}
+\newfontfamily{\latolightfont}[SmallCapsFont=AlegreyaSansSC-Regular]{Lato-Light}
+\newfontfamily{\inconsolatafont}[SmallCapsFont=AlegreyaSansSC-Regular]{Inconsolata}
 
 % beamer template changes
 \setbeamertemplate{frametitle}{

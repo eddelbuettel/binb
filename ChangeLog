@@ -1,5 +1,8 @@
 2018-09-24  Dirk Eddelbuettel  <edd@debian.org>
 
+	* inst/rmarkdown/templates/presento/skeleton/presento.sty: Tweaks
+	* inst/rmarkdown/templates/presento/skeleton/skeleton.Rmd: Ditto
+
 	* inst/presentoDemo/presentoDemo.Rmd: Longer demo
 	* inst/presentoDemo/presentoDemo.pdf: Ditto
 
