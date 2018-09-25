@@ -1,3 +1,15 @@
+2018-09-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/presentoDemo/presentoDemo.Rmd: Longer demo
+	* inst/presentoDemo/presentoDemo.pdf: Ditto
+
+	* docs/presento_minimal.pdf: Short demo for README
+	* docs/presento_minimal.gif: Ditto
+
+	* docs/metropolis_demo: Adding longer demo
+	* docs/metropolis_iqss: Ditto
+	* docs/metropolis_presento: Ditto
+
 2018-09-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/presento/resources/template.tex: Do not
