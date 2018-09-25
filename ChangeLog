@@ -13,6 +13,8 @@
 	* docs/metropolis_iqss: Ditto
 	* docs/metropolis_presento: Ditto
 
+	* README.md: Added presento section, also added three longer demos
+
 2018-09-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/presento/resources/template.tex: Do not

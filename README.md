@@ -7,14 +7,20 @@ Binb is not Beamer: Stylish pdf Presentation from RMarkdown
 The [Beamer](https://github.com/josephwright/beamer) package is very popular for making pdf
 presentations from LaTeX, and also supported from Markdown and
 [RMarkdown](https://github.com/rstudio/rmarkdown). This package (currently)
-provides functionality to use two custom (LaTeX) themes for
+provides functionality to use the following custom (LaTeX) themes for
 [Beamer](https://github.com/josephwright/beamer) directly via RMarkdown: 
+
 - [Metropolis](https://github.com/matze/mtheme) (formerly `mtheme`) by Matthias Vogelgesang
+  ([longer demo](https://eddelbuettel.github.io/binb/metropolis_demo.pdf))
 - [IQSS](https://github.com/IQSS/iqss-beamer-theme) by Ista Zahn
+  ([longer demo](https://eddelbuettel.github.io/binb/iqss_demo.pdf))
+- [Presento](https://github.com/RatulSaha/presento) by Ratul Saha
+  ([longer demo](https://eddelbuettel.github.io/binb/presento_demo.pdf))
 
-The original LaTeX styles been converted to be directly useable from [RMarkdown](https://github.com/rstudio/rmarkdown)
+The original LaTeX styles been converted to be directly useable from
+[RMarkdown](https://github.com/rstudio/rmarkdown)
 
-### Example
+### Examples
 
 #### Metropolis
 
@@ -80,10 +86,71 @@ animated gif (also losing font crispness):
 
 ![](https://eddelbuettel.github.io/binb/iqss_minimal.gif)
 
+
+#### Presento
+
+The following small example adapted some of the slides from original minimal example from the
+[Presento](https://github.com/RatulSaha/presento) repo:
+
+```{md}
+---
+author: Ratul Saha
+address: www.ratulsaha.com
+title: PRESENTO
+subtitle: clean, simple and extensible
+date: \today
+output: binb::presento
+---
+
+## Presento
+
+- \begin{center}\largetext{The design is \underline{clean}}\end{center}    \bigskip
+- \begin{center}\largetext{The rules are \underline{simple}}\end{center}   \bigskip
+- \item \begin{center}\largetext{The code is \underline{extensible}}\end{center}
+
+
+## Open Source Fonts
+
+-  \montserratfont This is \textsc{Montserrat}	\bigskip
+-  \notosansfont This is \textsc{Noto Sans}		\bigskip
+-  \latolightfont This is Lato (light)          \bigskip
+-  \inconsolatafont This is inconsolata         \bigskip
+-  \textsc{This is Alegreya Sans small caps}    \bigskip
+
+
+## Color Palette
+
+\begin{center}
+  \crule[colordgray] \crule[colorhgray] \crule[colorblue] \crule[colorgreen] \crule[colororange]
+\end{center}
+
+____
+
+\begin{center}
+ \hugetext{BIG BOLD TEXT} 
+ \medskip 
+ \small but background color does not work
+\end{center}
+
+____
+
+\tikz[overlay,remember picture] \node[opacity=0.8, at=(current page.center)]{%
+  \includegraphics[width=\paperwidth]{images/skeleton}};
+\begin{textblock}{7}(7,2.5)
+  {\color{colorblue}\hugetext{\textbf{RUN!}}}
+\end{textblock}
+
+```
+
+From this, one can creats this [pdf file](https://eddelbuettel.github.io/binb/presento_minimal.pdf) which 
+can be converted into this animated gif (again losing font crispness):
+
+![](https://eddelbuettel.github.io/binb/presento_minimal.gif)
+
         
 ### Status
 
-The package is (currently) fairly new and susceptible to change, but on
+The package is fairly new and susceptible to change, but on
 [CRAN](https://cran.r-project.org/).
 
 ### Usage 
@@ -114,22 +181,36 @@ Beyond the R package dependencies, a working `pandoc` binary is needed. RStudio 
 its own copy, otherwise do what is needed on your OS (_i.e._, something like `sudo apt-get
 install pandoc pandoc-citeproc`).
 
-The [Metropolis](https://github.com/matze/mtheme) LaTeX package is used, but we assume that is is
-installed via TeXLive, MikTeX or another LaTeX bundle. The LaTeX code for the [IQSS Beamer
-Theme](https://github.com/IQSS/iqss-beamer-theme) is included (adapted for
+The [Metropolis](https://github.com/matze/mtheme) LaTeX package is used, but we assume
+that is is installed via TeXLive, MikTeX or another LaTeX bundle. The LaTeX code for the
+[IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) and the [Presento
+Theme](https://github.com/RatulSaha/presento) are included (and adapted for
 [RMarkdown](https://github.com/rstudio/rmarkdown) use).
 
-These themse use additional fonts you may need to install:
+These themes use additional (free) fonts you may need to install:
 
 - [Metropolis](https://github.com/matze/mtheme) wants [Fira Sans](https://github.com/mozilla/Fira)
   but can proceed with alternate fonts;
 - [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) really requires
   [Libertinus](https://github.com/libertinus-fonts/libertinus), see the
   [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme)  page for details.
-  
-If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can use the
-informal font packages I created for [Fira and Fira Sans](https://github.com/eddelbuettel/pkg-fonts-fira)
-and [Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus), respectively.
+- [Presento Theme](https://github.com/RatulSaha/presento) wants 
+  [Montserrat](https://github.com/JulietaUla/Montserrat), 
+  [Lato Light](http://www.latofonts.com/) 
+  (also [here](https://github.com/google/fonts/tree/master/ofl/lato)),
+  [Noto Sans](https://www.google.com/get/noto),
+  [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and 
+  [Inconsolata](https://github.com/google/fonts/tree/master/ofl/inconsolata) as a monospaced font.
+
+If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can
+use the informal font packages I created for [Fira and Fira
+Sans](https://github.com/eddelbuettel/pkg-fonts-fira),
+[Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus),
+[Montserrat](https://github.com/eddelbuettel/pkg-fonts-montserrat), [Alegreya
+Sans](https://github.com/eddelbuettel/pkg-fonts-alegreya-sans), respectively.
+
+Most modern desktop systems make it easy to install additional fonts as a user. However,
+instructions vary so please see for your particular system.
 
 ### Authors
 
