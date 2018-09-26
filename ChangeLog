@@ -1,10 +1,20 @@
+2018-09-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* docs/Makefile: Auto-create gif files with correct specs
+
+2018-09-26  Mikko Korpela  <mvkorpel@iki.fi>
+
+	* docs/metropolis_minimal.gif: Recreated with correct use of display
+	* docs/iqss_minimal.gif: Ditto
+	* docs/presento_minimal.gif: Ditto
+
 2018-09-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/presento/skeleton/presento.sty: Tweaks
 	* inst/rmarkdown/templates/presento/skeleton/skeleton.Rmd: Ditto
 
-	* inst/presentoDemo/presentoDemo.Rmd: Longer demo
-	* inst/presentoDemo/presentoDemo.pdf: Ditto
+	* inst/presentoDemo/presento_demo.Rmd: Longer demo
+	* inst/presentoDemo/presento_demo.pdf: Ditto
 
 	* docs/presento_minimal.pdf: Short demo for README
 	* docs/presento_minimal.gif: Ditto
