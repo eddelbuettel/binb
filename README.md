@@ -1,6 +1,6 @@
 ## binb [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb) [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) [![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
 
-Binb is not Beamer: Stylish pdf Presentation from RMarkdown
+Binb is not Beamer: Stylish pdf Presentations from RMarkdown
 
 ### Motivation
 
@@ -43,8 +43,8 @@ output: binb::metropolis
 Hello, world!
 ````
 
-It creates a [three-page pdf file](https://eddelbuettel.github.io/binb/metropolis_minimal.pdf) which we converted into this 
-animated gif (which loses font crispness, sadly):
+It creates a [three-page pdf file](https://eddelbuettel.github.io/binb/metropolis_minimal.pdf) which
+we converted into this animated gif
 
 ![](https://eddelbuettel.github.io/binb/metropolis_minimal.gif)
 
@@ -81,8 +81,8 @@ Another planet!
 
 ````
 
-This creates this [pdf file](https://eddelbuettel.github.io/binb/iqss_minimal.pdf) which we converted into this 
-animated gif (also losing font crispness):
+This creates this [pdf file](https://eddelbuettel.github.io/binb/iqss_minimal.pdf) which we
+converted into this animated gif:
 
 ![](https://eddelbuettel.github.io/binb/iqss_minimal.gif)
 
@@ -142,8 +142,8 @@ ____
 
 ```
 
-From this, one can creats this [pdf file](https://eddelbuettel.github.io/binb/presento_minimal.pdf) which 
-can be converted into this animated gif (again losing font crispness):
+From this, one can creats this [pdf file](https://eddelbuettel.github.io/binb/presento_minimal.pdf)
+which can be converted into this animated gif:
 
 ![](https://eddelbuettel.github.io/binb/presento_minimal.gif)
 

@@ -3,7 +3,7 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
-\section{Changes in binb version 0.0.2 (2018-xx-yy)}{
+\section{Changes in binb version 0.0.2 (2018-09-27)}{
   \itemize{
     \item Added support for 'Presento' theme by Ratul Saha (\ghpr{4})
     \item Longer vignettes were added to the docs/ directory
