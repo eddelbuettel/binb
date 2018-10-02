@@ -1,3 +1,11 @@
+2018-10-02  Ista Zahn  <istazahn@gmail.com>
+
+        * inst/iqssDemo/beamerfontthemeiqss.sty: Fall back to default font
+	if Libertinus is unavailable
+
+	* inst/rmarkdown/templates/iqss/skeleton/beamerfontthemeiqss.sty:
+	Ditto
+
 2018-09-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.2

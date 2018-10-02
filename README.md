@@ -191,7 +191,7 @@ These themes use additional (free) fonts you may need to install:
 
 - [Metropolis](https://github.com/matze/mtheme) wants [Fira Sans](https://github.com/mozilla/Fira)
   but can proceed with alternate fonts;
-- [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) really requires
+- [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) wants
   [Libertinus](https://github.com/libertinus-fonts/libertinus), see the
   [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme)  page for details.
 - [Presento Theme](https://github.com/RatulSaha/presento) wants 

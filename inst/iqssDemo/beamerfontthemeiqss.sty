@@ -1,7 +1,48 @@
 \usefonttheme{professionalfonts}
+
 \RequirePackage{fontspec}
 
-\setmainfont{Libertinus Serif}
-\setsansfont{Libertinus Sans}
-\setmathfont{Libertinus Math}
-\setmonofont{Libertinus Mono}
+%% checkfont and iffontsavaiable copied from the metropolis theme
+%% by Matthias Vo­gelge­sang.
+%    Checks if a font is installed; if not, |fontsnotfound| is increased.
+\newcounter{fontsnotfound}
+\newcommand{\checkfont}[1]{%
+  \suppressfontnotfounderror=1%
+  \font\x = "#1" at 10pt
+  \selectfont
+  \ifx\x\nullfont%
+  \stepcounter{fontsnotfound}%
+  \fi%
+  \suppressfontnotfounderror=0%
+}
+%   Resets the |fontsnotfound| counter and calls |\checkfont| for each font in
+%   the comma separated list in the first argument.
+\newcommand{\iffontsavailable}[3]{%
+  \setcounter{fontsnotfound}{0}%
+  \expandafter\forcsvlist\expandafter%
+  \checkfont\expandafter{#1}%
+  \ifnum\value{fontsnotfound}=0%
+  #2%
+  \else%
+  #3%
+  \fi%
+}
+
+\iffontsavailable{Libertinus Serif,%
+  Libertinus Sans,%
+  LibertinusMath,%
+  Libertinus Mono}%
+{%
+  \setmainfont{Libertinus Serif}
+  \setsansfont{Libertinus Sans}
+  \setmathfont{Libertinus Math}
+  \setmonofont{Libertinus Mono}
+}{%
+  \PackageWarning{beamerthememeiqss}{%
+    Could not find Libertinus fonts.
+    Please install them from
+    https://github.com/libertinus-fonts/libertinus/releases
+    following the instructions at
+    https://github.com/IQSS/iqss-beamer-theme/blob/master/README.md% 
+  }
+}
