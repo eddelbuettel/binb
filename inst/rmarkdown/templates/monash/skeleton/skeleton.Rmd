@@ -1,0 +1,113 @@
+---
+title: Monash Beamer Class Demonstration
+author: Rob J Hyndman
+date: \today
+fontsize: 14pt
+titlefontsize: 22pt
+classoption: compress
+toc: true
+output: binb::monash
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE, cache=TRUE, dev.args=list(bg=grey(0.9), pointsize=11))
+```
+
+# Intro
+
+## Slide with bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+Use `\alert` to \alert{highlight} some text
+
+### Some enumeration
+
+1. The first item
+1. Stuff
+1. Nonsense
+
+# Using R
+
+## Slide with R output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with graphics
+
+```{r pressure}
+plot(pressure)
+```
+
+## Slide with mathematics
+
+Quantile score for observation $y$. For $0<p<1$:
+
+\begin{block}{}
+  \[
+    S(y_t,q_t(p)) = \left\{
+      \begin{array}{rl}
+            p(y_t-q_t(p)) & \text{if $y_t \ge q_t(p)$}\\
+        (1-p)(q_t(p)-y_t) & \text{if $y_t < q_t(p)$}
+      \end{array}\right.
+  \]
+\end{block}
+
+Average score over all percentiles gives the best distribution forecast:
+\[
+  QS = \frac{1}{99T}\sum_{p=1}^{99}\sum_{t=1}^T S(q_t(p),y_t)
+\]
+
+# RMarkdown Examples
+
+## R Figure
+
+The following code generates the plot on the next slide (taken from
+`help(bxp)` and modified slightly):
+
+\small
+
+```{r pressureCode, eval=FALSE, echo=TRUE}
+library(stats)
+set.seed(753)
+bx.p <- boxplot(split(rt(100, 4),
+                      gl(5, 20)), plot=FALSE)
+bxp(bx.p, notch = FALSE, boxfill = "orange",
+    frame = FALSE, outl = TRUE,
+    main = "Example from help(bxp)")
+```
+
+
+## R Figure
+
+```{r pressureFig, echo=FALSE}
+library(stats)
+set.seed(753)
+bx.p <- boxplot(split(rt(100, 4),
+                      gl(5, 20)), plot=FALSE)
+bxp(bx.p, notch = FALSE, boxfill = "orange",
+    frame = FALSE, outl = TRUE,
+    main = "Example from help(bxp)")
+```
+
+## R Table
+
+A simple `knitr::kable` example:
+
+\small
+
+```{r kableEx, echo=TRUE}
+knitr::kable(mtcars[1:4, 1:7],
+       caption="(Parts of) the mtcars dataset")
+```
+
+## Resources
+
+### For more information:
+- See the [RMarkdown repository](https://github.com/rstudio/rmarkdown) for more on RMarkdown
+- See the [binb repository](https://github.com/eddelbuettel/binb) for more on binb
+- See the [binb vignettes](https://github.com/eddelbuettel/binb/vignettes) for more examples.

@@ -1,0 +1,84 @@
+%% This is the Monash beamer theme
+%% Created for Monash Business School
+%% Updated by Rob J Hyndman. 8 October 2018
+
+\RequirePackage{beamerthememetropolis}
+\usecolortheme{monash}
+\usefonttheme{monash}
+
+\metroset{progressbar=foot}
+
+% Plenty of room
+\setbeamersize{text margin left=2em,text margin right=2em}
+
+% Rounded corners on boxes
+\useinnertheme{rounded}
+
+% Square bullets and enumerated items
+\setbeamertemplate{items}[square]
+
+% larger squares for enumeration
+\defbeamertemplate{enumerate item}{mysquare}
+{ \raisebox{-0.ex}{\hbox{%
+    \usebeamerfont*{item projected}%
+    \usebeamercolor{enumerate item}%
+    \vrule width4ex height2.7ex depth.7ex%
+    \hskip-4ex%
+    \hbox to4ex{%
+      \hfil%
+      \color{LightGrey}\raisebox{.2ex}{\insertenumlabel}%
+      \hfil}%
+  }}%
+}
+[action]
+{\setbeamerfont{item projected}{size=\scriptsize}}
+\setbeamertemplate{enumerate item}[mysquare]
+\setbeamertemplate{itemize item}[square]
+\setbeamertemplate{items}[mysquare]
+
+\usesubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
+}
+\usesubsubitemizeitemtemplate{%
+    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\bigstar$}%
+}
+
+\setbeamertemplate{section in toc}[square]
+\setbeamerfont{section number projected}{size=\large}
+\setbeamercolor{section number projected}{bg=Orange,fg=white}
+\setbeamercolor{section in toc shaded}{fg=white}
+\setbeamercolor{section in toc}{fg=DarkYellow}
+\setbeamertemplate{section in toc shaded}[default][50]
+
+% Figure placement
+\RequirePackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\def\placefig#1#2#3#4{\begin{textblock}{.1}(#1,#2)\rlap{\includegraphics[#3]{#4}}\end{textblock}}
+
+% Monash title page
+\setbeamertemplate{title page}
+{\placefig{-0.01}{-0.01}{width=1.01\paperwidth,height=1.01\paperheight}{MonashTitleSlide}
+\begin{textblock}{7.5}(1,2.8)\usebeamerfont{title}
+{\color{white}\raggedright\par\inserttitle}
+\end{textblock}
+\begin{textblock}{7.5}(1,7)
+{\color{white}\raggedright{\insertauthor}\\[0.2cm]
+\insertdate}
+\end{textblock}}
+
+% Reduce vertical space around displayed equations
+\preto\frame{%
+\setlength{\abovedisplayskip}{1pt}%
+\setlength{\belowdisplayskip}{4pt}%
+\setlength{\abovedisplayshortskip}{0pt}%
+\setlength{\belowdisplayshortskip}{0pt}}
+
+% Redefine shaded environment if it exists (for R plots)
+\ifcsname Shaded\endcsname
+  \definecolor{shadecolor}{RGB}{225,225,225}
+  \renewenvironment{Shaded}{\color{black}\begin{snugshade}\color{black}}{\end{snugshade}}
+\fi
+
+%%
+%% End of file `beamerthememonash.sty'.
