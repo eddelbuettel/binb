@@ -3,6 +3,7 @@
 \name{metropolis}
 \alias{metropolis}
 \alias{iqss}
+\alias{monash}
 \alias{presento}
 \title{Binb is not Beamer - PDF Presentation Themes}
 \usage{
@@ -22,6 +23,14 @@ iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
   "biblatex"), includes = NULL, md_extensions = NULL,
   pandoc_args = NULL)
 
+monash(toc = FALSE, slide_level = 2, incremental = FALSE,
+  fig_width = 8, fig_height = 5, fig_crop = TRUE,
+  fig_caption = TRUE, dev = "pdf", df_print = "default",
+  fonttheme = "default", highlight = "tango", keep_tex = FALSE,
+  latex_engine = "pdflatex", citation_package = c("none", "natbib",
+  "biblatex"), includes = NULL, md_extensions = NULL,
+  pandoc_args = NULL)
+
 presento(toc = FALSE, slide_level = 2, incremental = FALSE,
   fig_width = 10, fig_height = 7, fig_crop = TRUE,
   fig_caption = TRUE, dev = "pdf", df_print = "default",
@@ -34,7 +43,7 @@ presento(toc = FALSE, slide_level = 2, incremental = FALSE,
 \item{toc}{A logical variable defaulting to \code{FALSE}.}
 
 \item{slide_level}{A numeric variable defaulting to two for
-\sQuote{Metrpolis} and three for \sQuote{IQSS}.}
+\sQuote{Metropolis} and \sQuote{Monash}, and three for \sQuote{IQSS}.}
 
 \item{incremental}{A logical variable defaulting to \code{FALSE}.}
 
@@ -75,7 +84,8 @@ for it side effect of creating the pdf file.
 \description{
 Templates for RMarkdown-based Beamer PDF presentations supporting
 the \sQuote{Metropolis} style by Matthias Vogelgesang and others,
-and the \sQuote{IQSS} style by Ista Zahn and Gary King.
+the \sQuote{IQSS} style by Ista Zahn and Gary King,
+and the \sQuote{Monash} style by Rob J Hyndman.
 }
 \details{
 Note that not all options and customizations available at the LaTeX

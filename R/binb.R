@@ -1,6 +1,7 @@
 ##' Templates for RMarkdown-based Beamer PDF presentations supporting
 ##' the \sQuote{Metropolis} style by Matthias Vogelgesang and others,
-##' and the \sQuote{IQSS} style by Ista Zahn and Gary King.
+##' the \sQuote{IQSS} style by Ista Zahn and Gary King,
+##' and the \sQuote{Monash} style by Rob J Hyndman.
 ##'
 ##' Note that not all options and customizations available at the LaTeX
 ##' level are implemented or supported yet.  A number of styling options
@@ -11,7 +12,7 @@
 ##'
 ##' @param toc A logical variable defaulting to \code{FALSE}.
 ##' @param slide_level A numeric variable defaulting to two for
-##' \sQuote{Metrpolis} and three for \sQuote{IQSS}.
+##' \sQuote{Metropolis} and \sQuote{Monash}, and three for \sQuote{IQSS}.
 ##' @param incremental A logical variable defaulting to \code{FALSE}.
 ##' @param fig_width A numeric variable defaulting to ten.
 ##' @param fig_height A numeric variable defaulting to seven.
@@ -148,6 +149,58 @@ iqss <- function(toc = FALSE,
 
 }
 
+
+##' @rdname metropolis
+monash <- function(toc = FALSE,
+                 slide_level = 2,
+                 incremental = FALSE,
+                 fig_width = 8,
+                 fig_height = 5,
+                 fig_crop = TRUE,
+                 fig_caption = TRUE,
+                 dev = 'pdf',
+                 df_print = "default",
+                 fonttheme = "default",
+                 highlight = "tango",
+                 keep_tex = FALSE,
+                 latex_engine = "pdflatex",
+                 citation_package = c("none", "natbib", "biblatex"),
+                 includes = NULL,
+                 md_extensions = NULL,
+                 pandoc_args = NULL) {
+
+    for (f in c("beamercolorthememonash.sty", "beamerfontthememonash.sty",
+                "beamerthememonash.sty", "titlepage.png", "figs/"))
+        if (!file.exists(f))
+            file.copy(system.file("rmarkdown", "templates", "monash", "skeleton",
+                                  f, package="binb"),
+                      ".", recursive=TRUE)
+
+    template <- system.file("rmarkdown", "templates", "monash",
+                            "resources", "template.tex",
+                            package="binb")
+
+    rmarkdown::beamer_presentation(template = template,
+                                   toc = toc,
+                                   slide_level = slide_level,
+                                   incremental = incremental,
+                                   fig_width = fig_width,
+                                   fig_height = fig_height,
+                                   fig_crop = fig_crop,
+                                   fig_caption = fig_caption,
+                                   dev = dev,
+                                   df_print = df_print,
+                                   theme = "monash",
+                                   fonttheme = fonttheme,
+                                   highlight = highlight,
+                                   keep_tex = keep_tex,
+                                   latex_engine = latex_engine,
+                                   citation_package = citation_package,
+                                   includes = includes,
+                                   md_extensions = md_extensions,
+                                   pandoc_args = pandoc_args)
+
+}
 
 ##' @rdname metropolis
 presento <- function(toc = FALSE,
