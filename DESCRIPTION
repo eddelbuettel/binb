@@ -8,11 +8,10 @@ Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A collection of 'LaTeX' styles using 'Beamer' customization for
  pdf-based presentation slides in 'RMarkdown'. At present it contains
  'RMarkdown' adaptations of the LaTeX themes 'Metropolis' (formerly 'mtheme')
- theme by Matthias Vogelgesang and others (now included in 'TeXLive'),
- the 'IQSS' by Ista Zahn (which is included here), and
- the 'Monash' theme by Rob J Hyndman.
- Additional (free) fonts may be needed:
- 'Metropolis' prefers 'Fira', and 'IQSS' requires 'Libertinus'.
+ theme by Matthias Vogelgesang and others (now included in 'TeXLive'), the
+ 'IQSS' by Ista Zahn (which is included here), and the 'Monash' theme by
+ Rob J Hyndman. Additional (free) fonts may be needed: 'Metropolis' prefers
+ 'Fira', and 'IQSS' requires 'Libertinus'.
 URL: https://github.com/eddelbuettel/binb
 BugReports: https://github.com/eddelbuettel/binb/issues
 Imports: rmarkdown, knitr
