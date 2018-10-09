@@ -3,6 +3,7 @@
 %% Updated by Rob J Hyndman. 8 October 2018
 
 \RequirePackage{beamerthememetropolis}
+\usecolortheme{monashblue}
 \usefonttheme{monash}
 
 \metroset{progressbar=foot}
@@ -54,13 +55,14 @@
 \def\placefig#1#2#3#4{\begin{textblock}{.1}(#1,#2)\rlap{\includegraphics[#3]{#4}}\end{textblock}}
 
 % Monash title page
+\setbeamerfont{title}{series=\bfseries,parent=structure,size=\fontsize{24}{32}}
 \setbeamertemplate{title page}
 {\placefig{-0.01}{-0.01}{width=1.01\paperwidth,height=1.01\paperheight}{titlepage}
 \begin{textblock}{7.5}(1,2.8)\usebeamerfont{title}
 {\color{white}\raggedright\par\inserttitle}
 \end{textblock}
 \begin{textblock}{7.5}(1,7)
-{\color{white}\raggedright{\insertauthor}\\[0.2cm]
+{\color{white}\raggedright{\insertauthor}\mbox{}\\[0.2cm]
 \insertdate}
 \end{textblock}}
 
