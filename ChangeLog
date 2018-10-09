@@ -1,3 +1,7 @@
+2018-10-09 Rob Hyndman <rob.hyndman@monash.edu>
+
+  * Added Monash theme
+
 2018-10-02  Ista Zahn  <istazahn@gmail.com>
 
         * inst/iqssDemo/beamerfontthemeiqss.sty: Fall back to default font
