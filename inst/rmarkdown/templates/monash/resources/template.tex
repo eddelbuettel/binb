@@ -63,18 +63,15 @@ $endif$
 
 $if(colortheme)$
   \usecolortheme{$colortheme$}
-$else$
-  \usecolortheme{monashwhite}
 $endif$
 
 $if(fonttheme)$
   \usefonttheme{$fonttheme$}
 $endif$
 
+% A default size of 24 is set in beamerthememonash.sty
 $if(titlefontsize)$
   \setbeamerfont{title}{series=\bfseries,parent=structure,size=\fontsize{$titlefontsize$}{32}}
-$else$
-  \setbeamerfont{title}{series=\bfseries,parent=structure,size=\fontsize{22pt}{32}}
 $endif$
 
 $if(mainfont)$
