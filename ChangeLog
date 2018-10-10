@@ -1,3 +1,7 @@
+2018-10-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Rolled minor version 
+
 2018-10-09  Rob Hyndman  <rob.hyndman@monash.edu>
 
 	* Added Monash theme
