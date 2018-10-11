@@ -1,6 +1,10 @@
 2018-10-09  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Version, Date): Rolled minor version 
+	* DESCRIPTION (Version, Date): Rolled minor version
+
+	* inst/rmarkdown/templates/monash/resources/template.tex: Provide
+	better fallbacks for fontsize, titlefontsize, colortheme
+	* inst/rmarkdown/templates/monash/skeleton/skeleton.Rmd: Idem
 
 2018-10-09  Rob Hyndman  <rob.hyndman@monash.edu>
 

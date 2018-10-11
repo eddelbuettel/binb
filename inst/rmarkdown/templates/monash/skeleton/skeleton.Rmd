@@ -2,10 +2,7 @@
 title: Monash Beamer Class Demonstration
 author: Rob J Hyndman
 date: \today
-fontsize: 14pt
-titlefontsize: 22pt
 classoption: compress
-colortheme: monashblue
 toc: true
 output: binb::monash
 ---
