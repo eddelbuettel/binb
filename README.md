@@ -148,6 +148,14 @@ which can be converted into this animated gif:
 
 ![](https://eddelbuettel.github.io/binb/presento_minimal.gif)
 
+### Monash
+
+Below is an example of the [Monash Business School](https://www.monash.edu/business) theme by 
+[Rob Hyndman](https://robjhyndman.com/).  (The source is a little longer [and included in the
+repo](https://github.com/eddelbuettel/binb/blob/master/inst/rmarkdown/templates/monash/skeleton/skeleton.Rmd)
+and package so not shown here.)
+
+![](https://eddelbuettel.github.io/binb/monash_minimal.gif)
 
 ### Status
 
@@ -202,6 +210,8 @@ These themes use additional (free) fonts you may need to install:
   [Noto Sans](https://www.google.com/get/noto),
   [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and
   [Inconsolata](https://github.com/google/fonts/tree/master/ofl/inconsolata) as a monospaced font.
+- Monash wants the [Carlito](https://fontlibrary.org/en/font/carlito) which some systems (such Ubuntu) 
+  provide.
 
 If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can
 use the informal font packages I created for [Fira and Fira
@@ -215,8 +225,8 @@ instructions vary so please see for your particular system.
 
 ### Authors
 
-Dirk Eddelbuettel and Ista Zahn.
+Dirk Eddelbuettel, Ista Zahn and Rob Hyndman
 
 ### License
 
-GPL-2 for this package.
+GPL (>= 2) for this package.
