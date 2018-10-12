@@ -1,3 +1,12 @@
+2018-10-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.3
+
+2018-10-11  Ista Zahn  <istazahn@gmail.com>
+
+	* inst/rmarkdown/templates/iqss/resources/template.tex: Permit
+	override of titlepage header
+
 2018-10-09  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Rolled minor version

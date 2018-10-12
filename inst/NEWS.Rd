@@ -3,12 +3,16 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
-\section{Changes in binb version 0.0.3 (2018-xx-yy)}{
+\section{Changes in binb version 0.0.3 (2018-10-12)}{
   \itemize{
     \item The IQSS theme now has a fallback font if Libertinus is
     unavailable (Ista in \ghpr{7})
     \item Added support for 'Monash' theme (Rob Hyndman in \ghpr{10} and
     \ghpr{11} closing \ghit{9})
+    \item Simplified some options for the 'Monash' theme (Dirk in
+    \ghpr{13}) 
+    \item The IQSS theme can now set an alternate titlegraphic (Ista in
+    \ghpr{14}) 
   }
 }
 
