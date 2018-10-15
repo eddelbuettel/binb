@@ -1,3 +1,7 @@
+2018-10-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Small touchups
+
 2018-10-12  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.3
