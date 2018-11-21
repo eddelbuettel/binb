@@ -46,8 +46,10 @@
 
 \setbeamertemplate{section in toc}[square]
 \setbeamerfont{section number projected}{size=\large}
-
 \setbeamertemplate{section in toc shaded}[default][50]
+
+\usepackage{etoolbox}
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.2em}{}{}
 
 % Figure placement
 \RequirePackage[absolute,overlay]{textpos}
