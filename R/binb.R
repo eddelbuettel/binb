@@ -21,6 +21,7 @@
 ##' @param dev A character variable defaulting to \dQuote{pdf}.
 ##' @param df_print A character variable defaulting to \dQuote{default}.
 ##' @param fonttheme A character variable defaulting to \dQuote{default}.
+##' @param colortheme For the \sQuote{Monash} theme only. A character variable defaulting to \dQuote{monashwhite}.
 ##' @param highlight A character variable defaulting to \dQuote{tango}.
 ##' @param keep_tex A logical variable defaulting to \code{FALSE}.
 ##' @param latex_engine A character variable defaulting to \dQuote{xelatex}.
@@ -168,8 +169,7 @@ monash <- function(toc = FALSE,
                  citation_package = c("none", "natbib", "biblatex"),
                  includes = NULL,
                  md_extensions = NULL,
-                 pandoc_args = NULL,
-                 ...) {
+                 pandoc_args = NULL) {
 
     fcolortheme <- paste0("beamercolortheme",colortheme,".sty")
     for (f in c("beamerfontthememonash.sty",fcolortheme,
