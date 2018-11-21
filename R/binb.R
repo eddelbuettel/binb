@@ -161,15 +161,18 @@ monash <- function(toc = FALSE,
                  dev = 'pdf',
                  df_print = "default",
                  fonttheme = "default",
+                 colortheme = "monashwhite",
                  highlight = "tango",
                  keep_tex = FALSE,
                  latex_engine = "pdflatex",
                  citation_package = c("none", "natbib", "biblatex"),
                  includes = NULL,
                  md_extensions = NULL,
-                 pandoc_args = NULL) {
+                 pandoc_args = NULL,
+                 ...) {
 
-    for (f in c("beamercolorthememonash.sty", "beamerfontthememonash.sty",
+    fcolortheme <- paste0("beamercolortheme",colortheme,".sty")
+    for (f in c("beamerfontthememonash.sty",fcolortheme,
                 "beamerthememonash.sty", "titlepage.png", "figs/"))
         if (!file.exists(f))
             file.copy(system.file("rmarkdown", "templates", "monash", "skeleton",
@@ -191,6 +194,7 @@ monash <- function(toc = FALSE,
                                    dev = dev,
                                    df_print = df_print,
                                    theme = "monash",
+                                   colortheme = colortheme,
                                    fonttheme = fonttheme,
                                    highlight = highlight,
                                    keep_tex = keep_tex,
