@@ -21,6 +21,7 @@
 ##' @param dev A character variable defaulting to \dQuote{pdf}.
 ##' @param df_print A character variable defaulting to \dQuote{default}.
 ##' @param fonttheme A character variable defaulting to \dQuote{default}.
+##' @param colortheme For the \sQuote{Monash} theme only. A character variable defaulting to \dQuote{monashwhite}.
 ##' @param highlight A character variable defaulting to \dQuote{tango}.
 ##' @param keep_tex A logical variable defaulting to \code{FALSE}.
 ##' @param latex_engine A character variable defaulting to \dQuote{xelatex}.
@@ -161,6 +162,7 @@ monash <- function(toc = FALSE,
                  dev = 'pdf',
                  df_print = "default",
                  fonttheme = "default",
+                 colortheme = "monashwhite",
                  highlight = "tango",
                  keep_tex = FALSE,
                  latex_engine = "pdflatex",
@@ -169,7 +171,8 @@ monash <- function(toc = FALSE,
                  md_extensions = NULL,
                  pandoc_args = NULL) {
 
-    for (f in c("beamercolorthememonash.sty", "beamerfontthememonash.sty",
+    fcolortheme <- paste0("beamercolortheme",colortheme,".sty")
+    for (f in c("beamerfontthememonash.sty",fcolortheme,
                 "beamerthememonash.sty", "titlepage.png", "figs/"))
         if (!file.exists(f))
             file.copy(system.file("rmarkdown", "templates", "monash", "skeleton",
@@ -191,6 +194,7 @@ monash <- function(toc = FALSE,
                                    dev = dev,
                                    df_print = df_print,
                                    theme = "monash",
+                                   colortheme = colortheme,
                                    fonttheme = fonttheme,
                                    highlight = highlight,
                                    keep_tex = keep_tex,

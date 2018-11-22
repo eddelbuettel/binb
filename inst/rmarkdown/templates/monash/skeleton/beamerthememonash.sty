@@ -4,7 +4,7 @@
 
 \RequirePackage{beamerthememetropolis}
 % For binb, one can alter the color theme by by setting eg 'colortheme: monashblue' in the YAML header
-\usecolortheme{monashwhite}
+%\usecolortheme{monashwhite}
 \usefonttheme{monash}
 
 \metroset{progressbar=foot}
@@ -46,8 +46,10 @@
 
 \setbeamertemplate{section in toc}[square]
 \setbeamerfont{section number projected}{size=\large}
-
 \setbeamertemplate{section in toc shaded}[default][50]
+
+\usepackage{etoolbox}
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.2em}{}{}
 
 % Figure placement
 \RequirePackage[absolute,overlay]{textpos}

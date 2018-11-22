@@ -26,10 +26,10 @@ iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
 monash(toc = FALSE, slide_level = 2, incremental = FALSE,
   fig_width = 8, fig_height = 5, fig_crop = TRUE,
   fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", highlight = "tango", keep_tex = FALSE,
-  latex_engine = "pdflatex", citation_package = c("none", "natbib",
-  "biblatex"), includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL)
+  fonttheme = "default", colortheme = "monashwhite",
+  highlight = "tango", keep_tex = FALSE, latex_engine = "pdflatex",
+  citation_package = c("none", "natbib", "biblatex"), includes = NULL,
+  md_extensions = NULL, pandoc_args = NULL)
 
 presento(toc = FALSE, slide_level = 2, incremental = FALSE,
   fig_width = 10, fig_height = 7, fig_crop = TRUE,
@@ -75,6 +75,8 @@ presento(toc = FALSE, slide_level = 2, incremental = FALSE,
 \item{md_extensions}{An optional character variable defaulting to \code{NULL}.}
 
 \item{pandoc_args}{An optional character variable defaulting to \code{NULL}.}
+
+\item{colortheme}{For the \sQuote{Monash} theme only. A character variable defaulting to \dQuote{monashwhite}.}
 }
 \value{
 RMarkdown content processed is returned for use by the
