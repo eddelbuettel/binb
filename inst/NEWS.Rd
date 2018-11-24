@@ -3,6 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
+\section{Changes in binb version 0.0.4 (2018-xx-yy)}{
+  \itemize{
+    \item The Monash theme now had improved color theme handling (Rob
+    Hyndman in \ghpr{15})
+  }
+}
+
 \section{Changes in binb version 0.0.3 (2018-10-12)}{
   \itemize{
     \item The IQSS theme now has a fallback font if Libertinus is

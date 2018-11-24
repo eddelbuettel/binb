@@ -1,3 +1,10 @@
+2018-11-21  Rob Hyndman  <rob.hyndman@monash.edu>
+
+	* inst/rmarkdown/templates/monash/: Improved colortheme handling for
+	Monash theme, also improved spacing in table of contents
+	* R/binb.R: Updated for colortheme selection for Monash
+	* man/metropolis.Rd: Idem
+
 2018-10-15  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Small touchups
@@ -21,7 +28,7 @@
 
 2018-10-09  Rob Hyndman  <rob.hyndman@monash.edu>
 
-	* Added Monash theme
+	* inst/rmarkdown/templates/monash/: Added Monash theme
 
 2018-10-02  Ista Zahn  <istazahn@gmail.com>
 
