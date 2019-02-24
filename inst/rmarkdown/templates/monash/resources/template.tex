@@ -253,7 +253,7 @@ $endif$
 $if(toc)$
 \AtBeginSection[]{
    \frame<beamer>{
-   \frametitle{Outline}
+   \frametitle{$if(tocheader)$$tocheader$$else$Outline$endif$}
    \tableofcontents[currentsection,hideallsubsections]
   }}
 $endif$
@@ -334,7 +334,7 @@ $endfor$
 
 $if(toc)$
    \frame<beamer>{
-   \frametitle{Outline}
+   \frametitle{$if(tocheader)$$tocheader$$else$Outline$endif$}
    \tableofcontents[hideallsubsections]
   }
 $endif$
