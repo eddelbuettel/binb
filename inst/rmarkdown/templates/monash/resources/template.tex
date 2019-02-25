@@ -249,24 +249,29 @@ $if(dir)$
   \fi
 $endif$
 
-$for(header-includes)$
-  $header-includes$
-$endfor$
-
 %% Monash overrides
 $if(toc)$
 \AtBeginSection[]{
    \frame<beamer>{
-   \frametitle{Outline}
+   \frametitle{$if(tocheader)$$tocheader$$else$Outline$endif$}\vspace*{0.2cm}
+   $if(tighttoc)$\fontsize{12}{13}\selectfont\parskip=0cm\itemsep=0cm$endif$
    \tableofcontents[currentsection,hideallsubsections]
   }}
 $endif$
+$if(tighttoc)$
+\setbeamerfont{section number projected}{size=\small}
+$endif$
+
 % Redefine shaded environment if it exists (to ensure text is black)
 \ifcsname Shaded\endcsname
   \definecolor{shadecolor}{RGB}{225,225,225}
   \renewenvironment{Shaded}{\color{black}\begin{snugshade}\color{black}}{\end{snugshade}}
 \fi
 %%
+
+$for(header-includes)$
+  $header-includes$
+$endfor$
 
 $if(title)$
   \title[$shorttitle$]{$title$}
@@ -334,7 +339,8 @@ $endfor$
 
 $if(toc)$
    \frame<beamer>{
-   \frametitle{Outline}
+   \frametitle{$if(tocheader)$$tocheader$$else$Outline$endif$}\vspace*{0.2cm}
+   $if(tighttoc)$\fontsize{12}{13}\selectfont\parskip=0cm\itemsep=0cm$endif$
    \tableofcontents[hideallsubsections]
   }
 $endif$
