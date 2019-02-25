@@ -1,0 +1,142 @@
+---
+author: Rob J Hyndman
+title: Monash
+date: \today
+titlefontsize: 22pt
+fontsize: 12pt
+colortheme: monashblue
+toc: true
+tocheader: Time series graphics
+tighttoc: true
+output:
+  binb::monash:
+    fig_height: 4.5
+    fig_width: 8
+header-includes:
+  - \usepackage{booktabs}
+  - \tabcolsep=0.12cm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(forecast)
+library(ggplot2)
+options(width=50)
+```
+
+# Time plots
+
+## Time plots
+
+```{r}
+autoplot(USAccDeaths) +
+  ylab("Total deaths") + xlab("Year")
+```
+
+# Seasonal plots
+
+## Seasonal plots
+
+```{r}
+ggseasonplot(USAccDeaths, year.labels=TRUE,
+  year.labels.left=TRUE) + ylab("Total deaths")
+```
+
+## Seasonal plots
+
+  * Data plotted against the individual "seasons" in which the data were observed.  (In this case a "season" is a month.)
+  * Something like a time plot except that the data from each season are overlapped.
+  * Enables the underlying seasonal pattern to be seen more clearly, and also allows any substantial departures from the seasonal pattern to be easily identified.
+  * In R: `ggseasonplot()`
+
+# Seasonal polar plots
+
+## Seasonal polar plots
+
+```{r, out.width="6.2cm"}
+ggseasonplot(USAccDeaths, year.labels=TRUE,
+  polar=TRUE) + ylab("Total deaths")
+```
+
+\only<2>{
+  \begin{textblock}{4}(8,4)
+    \begin{alertblock}{}
+      Only change is to switch to polar coordinates.
+    \end{alertblock}
+  \end{textblock}
+}
+
+# Seasonal subseries plots
+
+## Seasonal subseries plots
+
+```{r, echo=TRUE}
+ggsubseriesplot(USAccDeaths) +
+  ylab("Total deaths")
+```
+
+## Seasonal subseries plots
+
+  * Data for each season collected together in time plot as separate time series.
+  * Enables the underlying seasonal pattern to be seen clearly, and changes in seasonality over time to be visualized.
+  * In R: `ggsubseriesplot()`
+
+
+# Lag plots and autocorrelation
+
+## Lagged scatterplots
+
+```{r}
+gglagplot(USAccDeaths, lags=9)
+```
+
+## Lagged scatterplots
+
+```{r}
+gglagplot(USAccDeaths, lags=9, do.lines=FALSE)
+```
+
+\only<2>{
+  \begin{textblock}{4}(8.3,3)
+    \begin{block}{}
+      \begin{itemize}\tightlist
+        \item Each graph shows $y_t$ plotted against $y_{t-k}$ for different values of $k$.
+        \item Autocorrelations are correlations associated with these scatterplots.
+      \end{itemize}
+    \end{block}
+  \end{textblock}
+}
+
+## Autocorrelation
+
+We denote the sample autocovariance at lag $k$ by $c_k$ and the sample autocorrelation at lag $k$ by $r_k$.  Then define
+
+\begin{block}{}
+\begin{align*}
+c_k &= \frac{1}{T}\sum_{t=k+1}^T (y_t-\bar{y})(y_{t-k}-\bar{y}) \\[0.cm]
+\text{and}\qquad
+r_{k} &= c_k/c_0
+\end{align*}
+\end{block}\pause\small
+
+  * $r_1$ indicates how successive values of  $y$  relate to each other
+  * $r_2$ indicates how  $y$ values two periods apart relate to each other
+  * $r_k$ is \textit{almost} the same as the sample correlation between $y_t$ and $y_{t-k}$.
+
+## Autocorrelation
+
+Results for first 9 lags for `USAccDeaths` data:
+
+
+```{r, echo=FALSE, results='asis'}
+USAccDeathsacf <- matrix(acf(c(USAccDeaths), lag.max=9,
+                      plot=FALSE)$acf[-1,,1], nrow=1)
+colnames(USAccDeathsacf) <- paste("$r_",1:9,"$",sep="")
+knitr::kable(USAccDeathsacf, booktabs=TRUE,
+             align="c", digits=3,
+             format.args=list(nsmall=3))
+```
+
+```{r USAccDeathsacf, fig.height=2.5}
+ggAcf(USAccDeaths)
+```
