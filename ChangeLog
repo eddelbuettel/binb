@@ -1,3 +1,7 @@
+2019-03-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add dependencies badge
+
 2018-11-21  Rob Hyndman  <rob.hyndman@monash.edu>
 
 	* inst/rmarkdown/templates/monash/: Improved colortheme handling for
