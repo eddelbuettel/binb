@@ -11,6 +11,7 @@ output:
       in_header: metropolis/header.tex
 bibliography: metropolis/demo.bib
 biblio-style: abbrvnat
+beameroption: "show notes"
 toc: true
 vignette: >
   %\VignetteIndexEntry{binb Metropolis Demo}
@@ -324,6 +325,39 @@ Some references \citep{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
 
 \scriptsize `allowframebreaks` is not used or needed, also changed `\cite` to
 `\citep`, and defaulted `natbib` to option `[round]`.
+
+## Notes
+
+Notes can be added either using latex syntax:
+
+```
+\note{
+  \begin{itemize}
+    \item \emph{This} is a note.
+  \end{itemize}
+}
+```
+
+\note{
+  \begin{itemize}
+    \item \emph{This} is a note.
+  \end{itemize}
+}
+
+or with pandoc (markdown) syntax:
+
+```
+<div class = "notes">
+  - This is *another* note.
+</div>
+```
+
+<div class = "notes">
+  - This is *another* note.
+</div>
+
+The display of the notes is controlled using the YAML argument `beameroption`.
+Here we have used `beameroption: "show notes"`.
 
 # Conclusion
 
