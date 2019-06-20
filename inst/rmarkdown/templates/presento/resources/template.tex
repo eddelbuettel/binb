@@ -28,7 +28,7 @@ $endif$
   \else
     \usepackage{fontspec}
   \fi
-  % DEdd Commented-out for binb use as it conflicts with presento font scaling  
+  % DEdd Commented-out for binb use as it conflicts with presento font scaling
   %\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 $for(fontfamilies)$
   \newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
@@ -249,7 +249,7 @@ $if(author)$
   $if(address)$ \\\setnote{$address$} $endif$
 }
 $endif$
-\newcommand{\myDetails}{\setnote{\today}}
+\newcommand{\myDetails}{\setnote{$date$}}
 
 %sty file
 %\usepackage{config/presento}
