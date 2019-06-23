@@ -1,3 +1,7 @@
+2019-06-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.4
+
 2019-06-20  Joseph Stachelek  <stachel2@msu.edu>
 
 	* inst/rmarkdown/templates/presento/resources/template.tex: Correctly

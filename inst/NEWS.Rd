@@ -3,7 +3,7 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
-\section{Changes in binb version 0.0.4 (2018-xx-yy)}{
+\section{Changes in binb version 0.0.4 (2018-06-23)}{
   \itemize{
     \item The Monash theme now has improved color theme handling (Rob
     Hyndman in \ghpr{15})
@@ -11,7 +11,7 @@
     other small improvements (Rob Hyndman in \ghpr{16}).
     \item A slide notes example was added to Metropolis, pgfpages can be
     used if present, \code{beameroption} was added to three templates
-    (Johan Larson in \ghpr{17}).
+    (Johan Larsson in \ghpr{17}).
     \item The Presento them now use the date from the yaml header
     (Joseph Stachelek in \ghpr{18})
   }
