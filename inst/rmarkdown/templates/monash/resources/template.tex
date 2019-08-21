@@ -78,18 +78,16 @@ $if(titlefontsize)$
   \setbeamerfont{title}{series=\bfseries,parent=structure,size=\fontsize{$titlefontsize$}{32}}
 $endif$
 
-% Change title page image
-$if(titlepage)$
+% Title page
 \setbeamertemplate{title page}
-{\placefig{-0.01}{-0.01}{width=1.01\paperwidth,height=1.01\paperheight}{$titlepage$}
+{\placefig{-0.01}{-0.01}{width=1.01\paperwidth,height=1.01\paperheight}{$if(titlepage)$$titlepage$$else$titlepage$endif$}
 \begin{textblock}{7.5}(1,2.8)\usebeamerfont{title}
-{\color{white}\raggedright\par\inserttitle}
+{\color{$if(titlecolor)$$titlecolor$$else$white$endif$}\raggedright\par\inserttitle}
 \end{textblock}
 \begin{textblock}{7.5}(1,7)
-{\color{white}\raggedright{\insertauthor}\mbox{}\\[0.2cm]
+{\color{$if(titlecolor)$$titlecolor$$else$white$endif$}\raggedright{\insertauthor}\mbox{}\\[0.2cm]
 \insertdate}
 \end{textblock}}
-$endif$
 
 $if(mainfont)$
   \usefonttheme{serif} % use mainfont rather than sansfont for slide text
