@@ -1,3 +1,41 @@
+2019-06-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.4
+
+2019-06-20  Joseph Stachelek  <stachel2@msu.edu>
+
+	* inst/rmarkdown/templates/presento/resources/template.tex: Correctly
+	pull date from Rmd rather than hardcode today
+
+2019-05-03  Johan Larson  <mail@larssonjohan.com>
+
+	* inst/rmarkdown/templates/iqss/resources/templates.tex: Support
+	beameroptions, use pgfpages if present
+	* inst/rmarkdown/templates/metropolis/resources/templates.tex: Idem
+	* inst/rmarkdown/templates/monash/resources/templates.tex: Idem
+
+	* vignettes/metropolisDemo.Rmd: Use beamperoption to show notes
+	* vignettes/metropolisDemo.pdf: Idem
+
+2019-03-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add dependencies badge
+
+2019-02-24  Rob Hyndman  <rob.hyndman@monash.edu>
+
+	* inst/rmarkdown/templates/monash/resources/template.tex: Header
+	includes moved to later in file, outline header can be changed, a
+	tightoc option was added
+	* inst/monashDemo/monashDemo.Rmd: Added
+	* inst/monashDemo/monashDemo.pdf: Idem
+
+2018-11-21  Rob Hyndman  <rob.hyndman@monash.edu>
+
+	* inst/rmarkdown/templates/monash/: Improved colortheme handling for
+	Monash theme, also improved spacing in table of contents
+	* R/binb.R: Updated for colortheme selection for Monash
+	* man/metropolis.Rd: Idem
+
 2018-10-15  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Small touchups
@@ -21,11 +59,11 @@
 
 2018-10-09  Rob Hyndman  <rob.hyndman@monash.edu>
 
-	* Added Monash theme
+	* inst/rmarkdown/templates/monash/: Added Monash theme
 
 2018-10-02  Ista Zahn  <istazahn@gmail.com>
 
-        * inst/iqssDemo/beamerfontthemeiqss.sty: Fall back to default font
+	* inst/iqssDemo/beamerfontthemeiqss.sty: Fall back to default font
 	if Libertinus is unavailable
 
 	* inst/rmarkdown/templates/iqss/skeleton/beamerfontthemeiqss.sty:

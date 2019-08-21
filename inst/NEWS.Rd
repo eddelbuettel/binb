@@ -3,6 +3,20 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
+\section{Changes in binb version 0.0.4 (2018-06-23)}{
+  \itemize{
+    \item The Monash theme now has improved color theme handling (Rob
+    Hyndman in \ghpr{15})
+    \item The Monash them has a demo, a new \code{tighttoc} option and
+    other small improvements (Rob Hyndman in \ghpr{16}).
+    \item A slide notes example was added to Metropolis, pgfpages can be
+    used if present, \code{beameroption} was added to three templates
+    (Johan Larsson in \ghpr{17}).
+    \item The Presento them now use the date from the yaml header
+    (Joseph Stachelek in \ghpr{18})
+  }
+}
+
 \section{Changes in binb version 0.0.3 (2018-10-12)}{
   \itemize{
     \item The IQSS theme now has a fallback font if Libertinus is
