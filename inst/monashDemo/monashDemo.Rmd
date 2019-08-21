@@ -4,10 +4,8 @@ title: Monash
 date: \today
 titlefontsize: 22pt
 fontsize: 12pt
-colortheme: monashblue
 toc: true
 tocheader: Time series graphics
-tighttoc: true
 output:
   binb::monash:
     fig_height: 4.5
