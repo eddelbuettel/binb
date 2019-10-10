@@ -1,3 +1,24 @@
+2019-10-09  David Selby  <david@selbys.org.uk>
+
+	* inst/rmarkdown/templates/presento/skeleton/presento.sty: Correctly
+	the exported theme name to 'Presento'
+
+2019-08-22  Rob Hyndman  <rob.hyndman@monash.edu>
+
+	* inst/rmarkdown/templates/monash/skeleton/beamerfontthememonash.sty:
+	Support additonal titlepage options
+	* inst/rmarkdown/templates/monash/resources/template.tex: Idem
+	* inst/monashDemo/monashOptions.Rmd: New demo showing more options
+	* inst/monashDemo/monashOptions.pdf: Ditto
+	* inst/monashDemo/title16x9.png: Graphic used in new demo
+	
+2019-08-21  Rob Hyndman  <rob.hyndman@monash.edu>
+
+	* inst/rmarkdown/templates/monash/resources/template.tex: Allow
+	alternate title page
+	* inst/rmarkdown/templates/monash/skeleton/beamerfontthememonash.sty:
+	Use bera as fallback font if carlito is not available
+	
 2019-06-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.4

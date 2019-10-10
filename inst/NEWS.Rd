@@ -3,17 +3,26 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
-\section{Changes in binb version 0.0.4 (2018-06-23)}{
+\section{Changes in binb version 0.0.5 (2019-xx-xx)}{
+  \itemize{
+    \item The Monash theme was updated with new titlepage and font
+    handling and an expanded demo (Rob in \ghpr{20}).
+    \item The presento theme is now correctly labeled as exported (David
+    Selby in \ghpr{22}).
+  }
+}
+
+\section{Changes in binb version 0.0.4 (2019-06-23)}{
   \itemize{
     \item The Monash theme now has improved color theme handling (Rob
-    Hyndman in \ghpr{15})
+    Hyndman in \ghpr{15}).
     \item The Monash them has a demo, a new \code{tighttoc} option and
     other small improvements (Rob Hyndman in \ghpr{16}).
     \item A slide notes example was added to Metropolis, pgfpages can be
     used if present, \code{beameroption} was added to three templates
     (Johan Larsson in \ghpr{17}).
     \item The Presento them now use the date from the yaml header
-    (Joseph Stachelek in \ghpr{18})
+    (Joseph Stachelek in \ghpr{18}).
   }
 }
 
