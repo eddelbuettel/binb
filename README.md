@@ -223,6 +223,14 @@ Sans](https://github.com/eddelbuettel/pkg-fonts-alegreya-sans), respectively.
 Most modern desktop systems make it easy to install additional fonts as a user. However,
 instructions vary so please see for your particular system.
 
+### See Also
+
+- [linl](https://github.com/eddelbuettel/linl): Linl is not Letter: LaTeX letters from RMarkdown
+- [pinp](https://github.com/eddelbuettel/pinp): Pinp is not PNAS: Snazzy one-or two column short papers or vignettes 
+- [tint](https://github.com/eddelbuettel/tint): tint is not tufte: Beautiful pdf or html handout or writeups
+
+and the [minm](https://github.com/eddelbuettel/minm) package installing all of them.
+
 ### Authors
 
 Dirk Eddelbuettel, Ista Zahn and Rob Hyndman
