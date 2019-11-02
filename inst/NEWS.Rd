@@ -3,12 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
-\section{Changes in binb version 0.0.5 (2019-xx-xx)}{
+\section{Changes in binb version 0.0.5 (2019-11-02)}{
   \itemize{
     \item The Monash theme was updated with new titlepage and font
     handling and an expanded demo (Rob in \ghpr{20}).
     \item The presento theme is now correctly labeled as exported (David
     Selby in \ghpr{22}).
+    \item The two Monash demos are now referenced from README.md (Dirk).
   }
 }
 
