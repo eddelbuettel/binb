@@ -303,6 +303,10 @@ $endif$
   $endif$
 }
 
+$if(titlegraphic)$
+  \titlegraphic{\hfill\includegraphics[height=1cm]{$titlegraphic$}}
+$endif$
+
 \begin{document}
 
 % Hide progress bar and footline on titlepage
