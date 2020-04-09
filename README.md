@@ -1,4 +1,4 @@
-## binb: Binb is not Beamer -- Stylish pdf Presentations from RMarkdown
+## binb: Binb is not Beamer
 
 [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb)
 [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
