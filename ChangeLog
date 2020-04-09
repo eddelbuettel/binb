@@ -1,3 +1,12 @@
+2020-04-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add 'last commit' badge
+
+2019-12-17  Andras Svraka <svraka.andras@gmail.com>
+
+	* inst/rmarkdown/templates/metropolis/resources/template.tex: Support
+	titlegraphics yaml option
+
 2019-11-02  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.5
@@ -23,14 +32,14 @@
 	* inst/monashDemo/monashOptions.Rmd: New demo showing more options
 	* inst/monashDemo/monashOptions.pdf: Ditto
 	* inst/monashDemo/title16x9.png: Graphic used in new demo
-	
+
 2019-08-21  Rob Hyndman  <rob.hyndman@monash.edu>
 
 	* inst/rmarkdown/templates/monash/resources/template.tex: Allow
 	alternate title page
 	* inst/rmarkdown/templates/monash/skeleton/beamerfontthememonash.sty:
 	Use bera as fallback font if carlito is not available
-	
+
 2019-06-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.4

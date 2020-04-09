@@ -1,6 +1,11 @@
-## binb [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb) [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) [![Dependencies](https://tinyverse.netlify.com/badge/binb)](https://cran.r-project.org/package=binb) [![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
+## binb: Binb is not Beamer -- Stylish pdf Presentations from RMarkdown
 
-Binb is not Beamer: Stylish pdf Presentations from RMarkdown
+[![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb)
+[![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
+[![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) 
+[![Dependencies](https://tinyverse.netlify.com/badge/binb)](https://cran.r-project.org/package=binb) 
+[![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
+[![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/binb)](https://github.com/eddelbuettel/binb)
 
 ### Motivation
 
