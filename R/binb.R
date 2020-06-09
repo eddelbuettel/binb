@@ -26,7 +26,7 @@
 ##' @param keep_tex A logical variable defaulting to \code{FALSE}.
 ##' @param latex_engine A character variable defaulting to \dQuote{xelatex}.
 ##' @param citation_package An optional character variable with possible value
-##' \dQuote{none}, \dQuote{natbib} (the default), or \dQuote{biblatex}.
+##' \dQuote{default}, \dQuote{natbib} (the default), or \dQuote{biblatex}.
 ##' @param includes An optional character variable defaulting to \code{NULL}.
 ##' @param md_extensions An optional character variable defaulting to \code{NULL}.
 ##' @param pandoc_args An optional character variable defaulting to \code{NULL}.
@@ -67,7 +67,7 @@ metropolis <- function(toc = FALSE,
                        highlight = "tango",
                        keep_tex = FALSE,
                        latex_engine = "xelatex",
-                       citation_package = c("none", "natbib", "biblatex"),
+                       citation_package = c("default", "natbib", "biblatex"),
                        includes = NULL,
                        md_extensions = NULL,
                        pandoc_args = NULL) {
@@ -112,7 +112,7 @@ iqss <- function(toc = FALSE,
                  highlight = "haddock",
                  keep_tex = FALSE,
                  latex_engine = "xelatex",
-                 citation_package = c("none", "natbib", "biblatex"),
+                 citation_package = c("default", "natbib", "biblatex"),
                  includes = NULL,
                  md_extensions = NULL,
                  pandoc_args = NULL) {
@@ -166,7 +166,7 @@ monash <- function(toc = FALSE,
                  highlight = "tango",
                  keep_tex = FALSE,
                  latex_engine = "pdflatex",
-                 citation_package = c("none", "natbib", "biblatex"),
+                 citation_package = c("default", "natbib", "biblatex"),
                  includes = NULL,
                  md_extensions = NULL,
                  pandoc_args = NULL) {
@@ -220,7 +220,7 @@ presento <- function(toc = FALSE,
                      highlight = "haddock",
                      keep_tex = FALSE,
                      latex_engine = "xelatex",
-                     citation_package = c("none", "natbib", "biblatex"),
+                     citation_package = c("default", "natbib", "biblatex"),
                      includes = NULL,
                      md_extensions = NULL,
                      pandoc_args = NULL) {
