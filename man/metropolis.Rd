@@ -8,36 +8,32 @@
 \title{Binb is not Beamer - PDF Presentation Themes}
 \usage{
 metropolis(toc = FALSE, slide_level = 2, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE,
-  fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", highlight = "tango", keep_tex = FALSE,
-  latex_engine = "xelatex", citation_package = c("none", "natbib",
-  "biblatex"), includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL)
+  fig_width = 10, fig_height = 7, fig_crop = TRUE, fig_caption = TRUE,
+  dev = "pdf", df_print = "default", fonttheme = "default",
+  highlight = "tango", keep_tex = FALSE, latex_engine = "xelatex",
+  citation_package = c("default", "natbib", "biblatex"), includes = NULL,
+  md_extensions = NULL, pandoc_args = NULL)
 
-iqss(toc = FALSE, slide_level = 3, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE,
-  fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", highlight = "haddock", keep_tex = FALSE,
-  latex_engine = "xelatex", citation_package = c("none", "natbib",
-  "biblatex"), includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL)
+iqss(toc = FALSE, slide_level = 3, incremental = FALSE, fig_width = 10,
+  fig_height = 7, fig_crop = TRUE, fig_caption = TRUE, dev = "pdf",
+  df_print = "default", fonttheme = "default", highlight = "haddock",
+  keep_tex = FALSE, latex_engine = "xelatex",
+  citation_package = c("default", "natbib", "biblatex"), includes = NULL,
+  md_extensions = NULL, pandoc_args = NULL)
 
-monash(toc = FALSE, slide_level = 2, incremental = FALSE,
-  fig_width = 8, fig_height = 5, fig_crop = TRUE,
-  fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", colortheme = "monashwhite",
+monash(toc = FALSE, slide_level = 2, incremental = FALSE, fig_width = 8,
+  fig_height = 5, fig_crop = TRUE, fig_caption = TRUE, dev = "pdf",
+  df_print = "default", fonttheme = "default", colortheme = "monashwhite",
   highlight = "tango", keep_tex = FALSE, latex_engine = "pdflatex",
-  citation_package = c("none", "natbib", "biblatex"), includes = NULL,
+  citation_package = c("default", "natbib", "biblatex"), includes = NULL,
   md_extensions = NULL, pandoc_args = NULL)
 
 presento(toc = FALSE, slide_level = 2, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE,
-  fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", highlight = "haddock", keep_tex = FALSE,
-  latex_engine = "xelatex", citation_package = c("none", "natbib",
-  "biblatex"), includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL)
+  fig_width = 10, fig_height = 7, fig_crop = TRUE, fig_caption = TRUE,
+  dev = "pdf", df_print = "default", fonttheme = "default",
+  highlight = "haddock", keep_tex = FALSE, latex_engine = "xelatex",
+  citation_package = c("default", "natbib", "biblatex"), includes = NULL,
+  md_extensions = NULL, pandoc_args = NULL)
 }
 \arguments{
 \item{toc}{A logical variable defaulting to \code{FALSE}.}
@@ -68,7 +64,7 @@ presento(toc = FALSE, slide_level = 2, incremental = FALSE,
 \item{latex_engine}{A character variable defaulting to \dQuote{xelatex}.}
 
 \item{citation_package}{An optional character variable with possible value
-\dQuote{none}, \dQuote{natbib} (the default), or \dQuote{biblatex}.}
+\dQuote{default}, \dQuote{natbib} (the default), or \dQuote{biblatex}.}
 
 \item{includes}{An optional character variable defaulting to \code{NULL}.}
 

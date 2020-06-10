@@ -1,3 +1,14 @@
+2020-06-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.6
+
+	* .travis.yml: Switch to bionic and R 4.0.0
+
+2020-06-08  Joseph Stachelek  <stachel2@msu.edu>
+
+	* R/binb.R: Update natbib default from 'none' to 'default' to please
+	current rmarkdown package
+
 2020-04-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Add 'last commit' badge
