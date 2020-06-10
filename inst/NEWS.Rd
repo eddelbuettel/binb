@@ -10,6 +10,7 @@
     \item The README.md file received another badge (Dirk).
     \item The \code{natbib} default value was updated to accomodate
     \pkg{rmarkdown} (Joseph Stachelek in \ghpr{26}).
+    \item Travis now uses R 4.0.0 and 'bionic' (Dirk).
   }
 }
 
