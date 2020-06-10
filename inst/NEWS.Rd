@@ -3,6 +3,16 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
+\section{Changes in binb version 0.0.6 (2020-06-10)}{
+  \itemize{
+    \item Support for YAML option \code{titlegraphic} was added in
+    Metropolis (Andras Scraka in \ghpr{23}).
+    \item The README.md file received another badge (Dirk).
+    \item The \code{natbib} default value was updated to accomodate
+    \pkg{rmarkdown} (Joseph Stachelek in \ghpr{26}).
+  }
+}
+
 \section{Changes in binb version 0.0.5 (2019-11-02)}{
   \itemize{
     \item The Monash theme was updated with new titlepage and font
