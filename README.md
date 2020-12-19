@@ -1,6 +1,7 @@
 ## binb: Binb is not Beamer
 
 [![Build Status](https://travis-ci.org/eddelbuettel/binb.svg)](https://travis-ci.org/eddelbuettel/binb)
+[![CI](https://github.com/eddelbuettel/binb/workflows/ci/badge.svg)](https://github.com/eddelbuettel/binb/actions?query=workflow%3Aci)
 [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
 [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) 
 [![Dependencies](https://tinyverse.netlify.com/badge/binb)](https://cran.r-project.org/package=binb) 
