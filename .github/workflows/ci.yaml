@@ -14,11 +14,11 @@ jobs:
   ci:
     strategy:
       matrix:
-        config:
+        include:
           #- {os: macOS-latest}
           - {os: ubuntu-latest}
 
-    runs-on: ${{ matrix.config.os }}
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v2
@@ -36,4 +36,5 @@ jobs:
         run: ./run.sh run_tests
 
       #- name: Coverage
+      #  if: ${{ matrix.os == 'ubuntu-latest' }}
       #  run: ./run.sh coverage
