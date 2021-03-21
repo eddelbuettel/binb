@@ -12,7 +12,7 @@ Description: A collection of 'LaTeX' styles using 'Beamer' customization for
  'IQSS' by Ista Zahn (which is included here), and the 'Monash' theme by
  Rob J Hyndman. Additional (free) fonts may be needed: 'Metropolis' prefers
  'Fira', and 'IQSS' requires 'Libertinus'.
-URL: https://github.com/eddelbuettel/binb
+URL: https://github.com/eddelbuettel/binb, https://dirk.eddelbuettel.com/code/binb.html
 BugReports: https://github.com/eddelbuettel/binb/issues
 Imports: rmarkdown, knitr
 VignetteBuilder: knitr
