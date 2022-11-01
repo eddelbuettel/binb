@@ -1,3 +1,7 @@
+2022-10-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3
+
 2021-11-05  Dirk Eddelbuettel  <edd@debian.org>
 
  	* README.md: Remove Travis badge
