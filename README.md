@@ -4,7 +4,7 @@
 [![Package-License](http://img.shields.io/badge/license-GPL--2-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) 
 [![CRAN](http://www.r-pkg.org/badges/version/binb)](https://cran.r-project.org/package=binb) 
 [![Dependencies](https://tinyverse.netlify.app/badge/binb)](https://cran.r-project.org/package=binb) 
-[![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](http://www.r-pkg.org/pkg/binb)
+[![Downloads](http://cranlogs.r-pkg.org/badges/binb?color=brightgreen)](https://www.r-pkg.org:443/pkg/binb)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/binb)](https://github.com/eddelbuettel/binb)
 
 ### Motivation
@@ -212,19 +212,19 @@ These themes use additional (free) fonts you may need to install:
 - [Metropolis](https://github.com/matze/mtheme) wants [Fira Sans](https://github.com/mozilla/Fira)
   but can proceed with alternate fonts;
 - [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme) wants
-  [Libertinus](https://github.com/libertinus-fonts/libertinus), see the
+  [Libertinus](https://github.com/alerque/libertinus), see the
   [IQSS Beamer Theme](https://github.com/IQSS/iqss-beamer-theme)  page for details.
 - [Presento Theme](https://github.com/RatulSaha/presento) wants
   [Montserrat](https://github.com/JulietaUla/Montserrat),
   [Lato Light](http://www.latofonts.com/)
   (also [here](https://github.com/google/fonts/tree/master/ofl/lato)),
-  [Noto Sans](https://www.google.com/get/noto),
+  [Noto Sans](https://fonts.google.com/noto),
   [Algreya Sans](https://github.com/huertatipografica/Alegreya-Sans) as the small caps font and
   [Inconsolata](https://github.com/google/fonts/tree/master/ofl/inconsolata) as a monospaced font.
 - [Monash](https://github.com/robjhyndman/MonashEBSTemplates) wants [Carlito](https://fontlibrary.org/en/font/carlito) which some systems (such as Ubuntu) 
   provide.
 
-If you use [Debian](https://www.debian.org) or [Ubuntu](https://www.ubuntu.com), you can
+If you use [Debian](https://www.debian.org) or [Ubuntu](https://ubuntu.com/), you can
 use the informal font packages I created for [Fira and Fira
 Sans](https://github.com/eddelbuettel/pkg-fonts-fira),
 [Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus),

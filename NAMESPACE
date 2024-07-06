@@ -1,3 +1,4 @@
 export("metropolis", "iqss", "presento", "monash")
 import("knitr")
 import("rmarkdown")
+import("codetools")

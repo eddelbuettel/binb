@@ -29,7 +29,7 @@ knitr::opts_chunk$set(cache=TRUE)
 ## Metropolis
 
 The \themename theme is a Beamer theme with minimal visual noise inspired
-by the [hsrm](https://github.com/hsrmbeamertheme/hsrmbeamertheme) Beamer
+by the [hsrm](https://github.com/benjamin-weiss/hsrmbeamertheme) Beamer
 Theme by Benjamin Weiss.
 
 Enable the theme (in \LaTeX) by loading

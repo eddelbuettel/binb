@@ -3,6 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/binb/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/binb/issues/#1}{##1}}
 
+\section{Changes in binb version 0.0.7 (2024-07-06)}{
+  \itemize{
+    \item Several rounds of small updates to ge continuous integration setup.
+    \item An additional LaTeX command needed by \pkg{pandoc} (>= 3.2.1) has
+    been added.
+  }
+}
+
 \section{Changes in binb version 0.0.6 (2020-06-10)}{
   \itemize{
     \item Support for YAML option \code{titlegraphic} was added in

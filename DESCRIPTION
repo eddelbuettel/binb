@@ -1,8 +1,8 @@
 Package: binb
 Type: Package
 Title: 'binb' is not 'Beamer'
-Version: 0.0.6
-Date: 2020-06-10
+Version: 0.0.7
+Date: 2024-07-06
 Author: Dirk Eddelbuettel, Ista Zahn and Rob Hyndman
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A collection of 'LaTeX' styles using 'Beamer' customization for
@@ -14,7 +14,7 @@ Description: A collection of 'LaTeX' styles using 'Beamer' customization for
  'Fira', and 'IQSS' requires 'Libertinus'.
 URL: https://github.com/eddelbuettel/binb, https://dirk.eddelbuettel.com/code/binb.html
 BugReports: https://github.com/eddelbuettel/binb/issues
-Imports: rmarkdown, knitr
+Imports: rmarkdown, knitr, codetools
 VignetteBuilder: knitr
 License: GPL (>= 2)
 Encoding: UTF-8
