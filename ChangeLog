@@ -1,3 +1,7 @@
+2024-07-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md (package): Switch some URLs from http to https
+
 2024-07-06  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.7
