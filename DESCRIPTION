@@ -1,8 +1,8 @@
 Package: binb
 Type: Package
 Title: 'binb' is not 'Beamer'
-Version: 0.0.7
-Date: 2024-07-06
+Version: 0.0.7.1
+Date: 2024-08-02
 Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")),
              person("Ista", "Zahn", role = "au",

@@ -1,5 +1,7 @@
 2024-08-02  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll minor version and date
+
 	* DESCRIPTION (Authors@R): Added
 
 2024-07-14  Dirk Eddelbuettel  <edd@debian.org>
