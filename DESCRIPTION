@@ -5,9 +5,9 @@ Version: 0.0.7.1
 Date: 2024-08-02
 Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")),
-             person("Ista", "Zahn", role = "au",
+             person("Ista", "Zahn", role = "aut",
                     comment = c(ORCID = "0009-0009-7604-6420")),
-             person("Rob", "Hyndman", role = "au",
+             person("Rob", "Hyndman", role = "aut",
                     comment = c(ORCID = "0000-0002-2140-5352")))
 Description: A collection of 'LaTeX' styles using 'Beamer' customization for
  pdf-based presentation slides in 'RMarkdown'. At present it contains
