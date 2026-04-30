@@ -1,7 +1,15 @@
+2026-04-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version and date
+
 2026-04-29  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/rmarkdown/templates/metropolis/resources/template.tex: Add a
 	new counter variable as needed by newer pandoc
+	* inst/rmarkdown/templates/iqss/resources/template.tex: Idem
+	* inst/rmarkdown/templates/monash/resources/template.tex: Idem
+	* inst/rmarkdown/templates/presento/resources/template.tex: Idem,
+	also define \pandocbounded command needed by more recent pandoc
 
 2026-04-06  Rob J Hyndman  <robjhyndman@gmail.com>
 
