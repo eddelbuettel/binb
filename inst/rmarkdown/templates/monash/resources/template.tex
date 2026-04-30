@@ -184,6 +184,8 @@ $if(tables)$
   \makeatletter
   \def\fnum@table{\tablename~\thetable}
   \makeatother
+  % Borrowed from beamer_presentation for newer pandoc per issue #32
+  \newcounter{none}  % for unnumbered tables
 $endif$
 
 $if(graphics)$

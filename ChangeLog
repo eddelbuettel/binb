@@ -1,3 +1,12 @@
+2026-04-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/metropolis/resources/template.tex: Add a
+	new counter variable as needed by newer pandoc
+
+2026-04-06  Rob J Hyndman  <robjhyndman@gmail.com>
+
+	* DESCRIPTION: Correct typo in two of the three 'aut' tags
+
 2025-11-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v6

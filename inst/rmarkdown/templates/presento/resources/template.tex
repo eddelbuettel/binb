@@ -129,8 +129,10 @@ $highlighting-macros$
 $endif$
 $if(tables)$
 \usepackage{longtable,booktabs}
+% Borrowed from beamer_presentation for newer pandoc per issue #32
+\newcounter{none}  % for unnumbered tables
 % Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
+%\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
 $endif$
 $if(graphics)$
 \usepackage{graphicx,grffile}
@@ -267,6 +269,8 @@ $endif$
 
 
 %% presento end
+
+\providecommand{\pandocbounded}[1]{#1}
 
 \begin{document}
 %% DEdd Commented-out for presento
