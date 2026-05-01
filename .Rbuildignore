@@ -7,3 +7,4 @@
 ^vignettes/.*_files
 ^\.travis.yml$
 ^\.github
+^local

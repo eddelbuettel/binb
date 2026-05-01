@@ -224,7 +224,7 @@ These themes use additional (free) fonts you may need to install:
 - [Monash](https://github.com/robjhyndman/MonashEBSTemplates) wants [Carlito](https://fontlibrary.org/en/font/carlito) which some systems (such as Ubuntu) 
   provide.
 
-If you use [Debian](https://www.debian.org) or [Ubuntu](https://ubuntu.com/), you can
+If you use [Debian](https://www.debian.org) or [Ubuntu](https://ubuntu.com), you can
 use the informal font packages I created for [Fira and Fira
 Sans](https://github.com/eddelbuettel/pkg-fonts-fira),
 [Libertinus](https://github.com/eddelbuettel/pkg-fonts-libertinus),
