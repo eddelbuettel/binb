@@ -2,6 +2,8 @@
 
 	* DESCRIPTION (Version, Date): Release 0.0.8
 
+	* vignettes/metropolisDemo.Rmd: Correct a typo (post release)
+
 2026-04-30  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll minor version and date

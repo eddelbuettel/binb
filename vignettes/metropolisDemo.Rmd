@@ -160,7 +160,7 @@ The theme provides sensible defaults to \emph{emphasize} text,
 \end{itemize}
 
 \bigskip
-\scriptsize This uses \LaTeX\ for aninmation. The next slides uses RMarkdown
+\scriptsize This uses \LaTeX\ for animation. The next slides uses RMarkdown
 
 ## Animation (using RMarkdown, plus one \LaTeX\ trick)
 
